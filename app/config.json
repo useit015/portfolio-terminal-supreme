@@ -36,6 +36,16 @@
         "name": "React Native AI",
         "description": "Full stack framework for building cross-platform mobile AI apps.",
         "link": "https://github.com/dabit3/react-native-ai"
+      },
+      {
+        "name": "Supreme Terminal Portfolio",
+        "description": "Full stack framework for building cross-platform mobile AI apps.",
+        "link": "git@github.com:dabit3/portfolio-terminal-supreme.git"
+      },
+      {
+        "name": "All",
+        "description": "View all of the projects I'm working on.",
+        "link": "https://github.com/dabit3"
       }
     ]
   },

@@ -56,27 +56,27 @@ export const processCommand = (input: string, config: Config): React.ReactNode =
             <div className="flex gap-4 items-center">
               <span className="w-6 text-center">📧</span>
               <span className="w-24 font-bold">Email:</span>
-              <a href={`mailto:${config.content.social.email}`} className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">{config.content.social.email}</a>
+              <a href={`mailto:${config.content.social.email}`} className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">{config.content.social.email}</a>
             </div>
             <div className="flex gap-4 items-center">
               <span className="w-6 text-center">🔗</span>
               <span className="w-24 font-bold">Github:</span>
-              <a href={`https://github.com/${config.content.social.github}`} target="_blank" rel="noopener noreferrer" className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">{config.content.social.github}</a>
+              <a href={`https://github.com/${config.content.social.github}`} target="_blank" rel="noopener noreferrer" className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">{config.content.social.github}</a>
             </div>
             <div className="flex gap-4 items-center">
               <span className="w-6 text-center">💼</span>
               <span className="w-24 font-bold">Linkedin:</span>
-              <a href={`https://linkedin.com/in/${config.content.social.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">{config.content.social.linkedin}</a>
+              <a href={`https://linkedin.com/in/${config.content.social.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">{config.content.social.linkedin}</a>
             </div>
             <div className="flex gap-4 items-center">
               <span className="w-6 text-center">𝕏</span>
               <span className="w-24 font-bold">Twitter:</span>
-              <a href={`https://x.com/${config.content.social.twitter}`} target="_blank" rel="noopener noreferrer" className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">{config.content.social.twitter}</a>
+              <a href={`https://x.com/${config.content.social.twitter}`} target="_blank" rel="noopener noreferrer" className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">{config.content.social.twitter}</a>
             </div>
             <div className="flex gap-4 items-center">
               <span className="w-6 text-center">📝</span>
               <span className="w-24 font-bold">Substack:</span>
-              <a href={`https://${config.content.social.substack}`} target="_blank" rel="noopener noreferrer" className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">{config.content.social.substack}</a>
+              <a href={`https://${config.content.social.substack}`} target="_blank" rel="noopener noreferrer" className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">{config.content.social.substack}</a>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ export const processCommand = (input: string, config: Config): React.ReactNode =
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-brand-link font-bold hover:bg-brand-link hover:text-brand-highlightText focus:bg-brand-link focus:text-brand-highlightText focus:outline-none w-fit px-1 -ml-1 transition-colors"
+                className="text-brand-link font-bold underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:bg-brand-link focus:text-brand-highlightText focus:outline-none w-fit px-1 -ml-1 transition-colors"
               >
                 {project.name}
               </a>
@@ -107,23 +107,23 @@ export const processCommand = (input: string, config: Config): React.ReactNode =
         <div className="flex flex-col gap-2">
           <div className="flex gap-4">
             <span className="w-20 font-bold">Email:</span>
-            <a href={`mailto:${social.email}`} className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">{social.email}</a>
+            <a href={`mailto:${social.email}`} className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">{social.email}</a>
           </div>
           <div className="flex gap-4">
             <span className="w-20 font-bold">GitHub:</span>
-            <a href={`https://github.com/${social.github}`} target="_blank" rel="noopener noreferrer" className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">github.com/{social.github}</a>
+            <a href={`https://github.com/${social.github}`} target="_blank" rel="noopener noreferrer" className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">github.com/{social.github}</a>
           </div>
           <div className="flex gap-4">
             <span className="w-20 font-bold">LinkedIn:</span>
-            <a href={`https://linkedin.com/in/${social.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">linkedin.com/in/{social.linkedin}</a>
+            <a href={`https://linkedin.com/in/${social.linkedin}`} target="_blank" rel="noopener noreferrer" className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">linkedin.com/in/{social.linkedin}</a>
           </div>
           <div className="flex gap-4">
             <span className="w-20 font-bold">X:</span>
-            <a href={`https://x.com/${social.twitter}`} target="_blank" rel="noopener noreferrer" className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">x.com/{social.twitter}</a>
+            <a href={`https://x.com/${social.twitter}`} target="_blank" rel="noopener noreferrer" className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">x.com/{social.twitter}</a>
           </div>
            <div className="flex gap-4">
             <span className="w-20 font-bold">Substack:</span>
-            <a href={`https://${social.substack}`} target="_blank" rel="noopener noreferrer" className="text-brand-link hover:underline focus:outline-none focus:ring-2 focus:ring-brand-link focus:ring-offset-1">{social.substack}</a>
+            <a href={`https://${social.substack}`} target="_blank" rel="noopener noreferrer" className="text-brand-link underline decoration-dotted underline-offset-4 hover:no-underline hover:bg-brand-link hover:text-brand-highlightText focus:outline-none focus:bg-brand-link focus:text-brand-highlightText transition-colors">{social.substack}</a>
           </div>
         </div>
       );
