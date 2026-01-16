@@ -1,0 +1,71 @@
+{
+  "identity": {
+    "title": "Nader Dabit | Supreme Terminal",
+    "username": "nader",
+    "hostname": "supreme",
+    "greeting": "Yo. I'm Nader Dabit. Developer, creator, and founder."
+  },
+  "content": {
+    "ascii": [
+      "  _   _    _    ____  _____ ____    ____    _    ____ ___ _____ ",
+      " | \\ | |  / \\  |  _ \\| ____|  _ \\  |  _ \\  / \\  | __ )_ _|_   _|",
+      " |  \\| | / _ \\ | | | |  _| | |_) | | | | |/ _ \\ |  _ \\| |  | |  ",
+      " | |\\  |/ ___ \\| |_| | |___|  _ <  | |_| / ___ \\| |_) | |  | |  ",
+      " |_| \\_/_/   \\_\\____/|_____|_| \\_\\ |____/_/   \\_\\____/___| |_|  ",
+      "                                                                "
+    ],
+    "social": {
+      "email": "dabit3@gmail.com",
+      "github": "dabit3",
+      "linkedin": "naderdabit",
+      "twitter": "dabit3",
+      "substack": "nader.substack.com"
+    },
+    "projects": [
+      {
+        "name": "OpenForm",
+        "description": "Open Source TypeForm Clone.",
+        "link": "https://github.com/dabit3/openform"
+      },
+      {
+        "name": "Fabricate",
+        "description": "An experimental research tool for fabricating GitHub personas with AI-generated repositories.",
+        "link": "https://github.com/dabit3/fabricate"
+      },
+      {
+        "name": "React Native AI",
+        "description": "Full stack framework for building cross-platform mobile AI apps.",
+        "link": "https://github.com/dabit3/react-native-ai"
+      }
+    ]
+  },
+  "theme": {
+    "colors": {
+      "background": "#FFFFFF",
+      "foreground": "#000000",
+      "banner": "#DA291C",
+      "border": {
+        "visible": true,
+        "color": "#000000"
+      },
+      "prompt": {
+        "default": "#000000",
+        "user": "#DA291C",
+        "host": "#000000",
+        "input": "#000000"
+      },
+      "link": {
+        "text": "#DA291C",
+        "highlightColor": "#000000",
+        "highlightText": "#FFFFFF"
+      },
+      "commands": {
+        "textColor": "#000000"
+      }
+    },
+    "font": {
+      "family": "'Courier New', Courier, monospace",
+      "fallback": "monospace"
+    }
+  }
+}
