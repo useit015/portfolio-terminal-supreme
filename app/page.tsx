@@ -1,10 +1,10 @@
 import Terminal from './components/Terminal';
-import config from './config.json';
+import content from './content';
 
 export default function Home() {
   return (
     <main>
-      <Terminal config={config} />
+      <Terminal content={content} />
     </main>
   );
 }

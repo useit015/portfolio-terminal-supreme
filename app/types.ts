@@ -1,57 +1,77 @@
-export interface Config {
+export interface PortfolioLink {
+  label: string;
+  href: string;
+  display: string;
+}
+
+export interface PortfolioSkillGroup {
+  category: string;
+  items: string[];
+}
+
+export interface PortfolioExperienceEntry {
+  company: string;
+  role: string;
+  period: string;
+  summary: string;
+  bullets: string[];
+}
+
+export interface PortfolioProject {
+  name: string;
+  tag: string;
+  description: string;
+  stack: string[];
+  outcome: string;
+  link: string;
+}
+
+export interface PortfolioContent {
   identity: {
     title: string;
     username: string;
     hostname: string;
-    greeting: string;
+    name: string;
+    role: string;
+    location: string;
+    intro: string;
+    summary: string;
+    availability: string;
   };
-  content: {
-    ascii: string[];
-    social: {
-      email: string;
-      github: string;
-      linkedin: string;
-      twitter: string;
-      substack: string;
-    };
-    projects: Array<{
-      name: string;
-      description: string;
-      link: string;
-    }>;
-  };
+  banner: string[];
+  boot: string[];
+  links: PortfolioLink[];
+  highlights: string[];
+  skills: PortfolioSkillGroup[];
+  experience: PortfolioExperienceEntry[];
+  projects: PortfolioProject[];
   theme: {
-    colors: {
-      background: string;
-      foreground: string;
-      banner: string;
-      border: {
-        visible: boolean;
-        color: string;
-      };
-      prompt: {
-        default: string;
-        user: string;
-        host: string;
-        input: string;
-      };
-      link: {
-        text: string;
-        highlightColor: string;
-        highlightText: string;
-      };
-      commands: {
-        textColor: string;
-      };
-    };
-    font: {
-      family: string;
-      fallback: string;
-    };
+    background: string;
+    foreground: string;
+    panel: string;
+    panelEdge: string;
+    accent: string;
+    accentSoft: string;
+    muted: string;
+    promptUser: string;
+    promptHost: string;
+    promptInput: string;
+    headerGlow: string;
+    fontStack: string;
   };
 }
 
-export type CommandType = 'help' | 'banner' | 'about' | 'projects' | 'contact' | 'clear' | 'error' | 'system';
+export type CommandType =
+  | 'help'
+  | 'banner'
+  | 'about'
+  | 'experience'
+  | 'projects'
+  | 'skills'
+  | 'contact'
+  | 'clear'
+  | 'error'
+  | 'system';
 
 export interface CommandOutput {
   type: CommandType;

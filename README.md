@@ -1,52 +1,48 @@
-# Supreme Terminal Portfolio
+# Oussama Nahiz Terminal Portfolio
 
-A terminal-styled personal portfolio website with "Supreme" branding aesthetics. Built with Next.js, TypeScript, and Tailwind CSS.
+A terminal-driven portfolio built from `dabit3/portfolio-terminal-supreme` and reworked into a personal site for Oussama Nahiz. It keeps the command-line interaction model, but swaps the original Supreme branding for a custom profile, expanded command set, and a darker editorial terminal aesthetic.
 
 ## Features
 
-- **Terminal UI**: Fully functional command-line interface with history navigation and auto-completion.
-- **Supreme Theme**: Minimalist white/red/black aesthetic inspired by Supreme.
-- **Configurable**: All content and theming (ASCII art, social links, colors) are driven by a single JSON config file.
-- **Responsive**: Works seamlessly on desktop and mobile devices.
-- **Keyboard Navigation**: 
-  - `Tab` to auto-complete commands
-  - `↑` / `↓` to navigate command history
-  - `Esc` to clear input
+- Terminal UI with command history and auto-completion
+- Expanded commands: `about`, `experience`, `projects`, `skills`, `contact`
+- Typed portfolio content source in [`app/content.ts`](./app/content.ts)
+- Responsive shell layout for desktop and mobile
+- Keyboard shortcuts for history, completion, and clearing input
 
 ## Getting Started
 
-1. **Install dependencies:**
+1. Install dependencies:
    ```bash
    npm install
    ```
 
-2. **Run the development server:**
+2. Run the development server:
    ```bash
    npm run dev
    ```
 
-3. **Open the app:**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+3. Open [http://localhost:3000](http://localhost:3000)
 
 ## Customization
 
-Edit `app/config.json` to update your identity, social links, projects, and theme settings.
+- Edit [`app/content.ts`](./app/content.ts) to update identity, projects, experience, links, and theme tokens.
+- Command definitions and rendering live in [`app/utils/commands.tsx`](./app/utils/commands.tsx).
+- The interactive shell chrome lives in [`app/components/Terminal.tsx`](./app/components/Terminal.tsx).
 
-```json
-{
-  "identity": {
-    "username": "yourname",
-    "hostname": "supreme"
-  },
-  "content": {
-    "social": { ... },
-    "projects": [ ... ]
-  }
-}
+## Deployment
+
+This project is intended to be deployed as a standard Next.js app on Vercel.
+
+```bash
+npm run build
 ```
+
+If the build passes locally, import the repo into Vercel and deploy from the default branch.
 
 ## Tech Stack
 
-- **Framework**: Next.js 15+ (App Router)
-- **Styling**: Tailwind CSS
-- **Language**: TypeScript
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4

@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-link: var(--link-color);
-  --color-brand-banner: var(--banner-color);
+  --color-brand-background: var(--bg-color);
   --color-brand-foreground: var(--fg-color);
-  --color-brand-highlightText: var(--link-highlight-text);
+  --color-brand-panel: var(--panel-color);
+  --color-brand-panelEdge: var(--panel-edge);
+  --color-brand-accent: var(--accent-color);
+  --color-brand-accentSoft: var(--accent-soft);
+  --color-brand-muted: var(--muted-color);
   
   --animate-fade-in: fadeIn 0.3s ease-in-out;
   
@@ -27,24 +30,37 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  --bg-color: #09111f;
+  --fg-color: #eaf2ff;
+  --panel-color: #0f1a2e;
+  --panel-edge: #21324d;
+  --accent-color: #7dd3fc;
+  --accent-soft: #fbbf24;
+  --muted-color: #93accf;
+}
+
+html {
+  background: var(--bg-color);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-color);
+  color: var(--fg-color);
   font-family: var(--font-stack, monospace);
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent body scroll, let terminal handle it */
+  min-height: 100vh;
 }
 
-/* Custom Scrollbar */
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
+.font-mono {
+  font-family: var(--font-stack, monospace);
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import config from './config.json';
+import content from './content';
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: config.identity.title,
-  description: config.identity.greeting,
+  title: content.identity.title,
+  description: content.identity.intro,
 };
 
 export default function RootLayout({
