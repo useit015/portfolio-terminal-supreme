@@ -1,10 +1,5 @@
-import Terminal from './components/Terminal';
-import content from './content';
+import AppShell from "./components/AppShell";
 
 export default function Home() {
-  return (
-    <main>
-      <Terminal content={content} />
-    </main>
-  );
+  return <AppShell />;
 }

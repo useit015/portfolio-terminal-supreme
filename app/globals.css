@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -5,15 +6,23 @@
   --color-brand-foreground: var(--fg-color);
   --color-brand-panel: var(--panel-color);
   --color-brand-panelEdge: var(--panel-edge);
+  --color-brand-panelInset: var(--panel-inset);
   --color-brand-accent: var(--accent-color);
   --color-brand-accentSoft: var(--accent-soft);
   --color-brand-muted: var(--muted-color);
-  
-  --animate-fade-in: fadeIn 0.3s ease-in-out;
-  
+
+  --animate-fade-in: fadeIn 220ms ease-out;
+
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -21,46 +30,143 @@
   :root {
     --animate-fade-in: none;
   }
-  *, ::before, ::after {
+
+  *,
+  ::before,
+  ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 :root {
-  --bg-color: #09111f;
-  --fg-color: #eaf2ff;
-  --panel-color: #0f1a2e;
-  --panel-edge: #21324d;
-  --accent-color: #7dd3fc;
-  --accent-soft: #fbbf24;
-  --muted-color: #93accf;
+  --bg-color: #0d1117;
+  --fg-color: #d0d7de;
+  --panel-color: #11161d;
+  --panel-edge: #30363d;
+  --panel-inset: #161b22;
+  --page-glow: rgba(63, 185, 80, 0.12);
+  --page-shine: rgba(255, 255, 255, 0.03);
+  --surface-sheen: rgba(255, 255, 255, 0.01);
+  --accent-color: #3fb950;
+  --accent-soft: #7ee787;
+  --muted-color: #8b949e;
+  --chrome-close: #ef6b73;
+  --chrome-minimize: #d29922;
+  --chrome-maximize: #3fb950;
+  --shadow-color: rgba(1, 4, 9, 0.45);
+  --scanline-color: rgba(255, 255, 255, 0.03);
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
 
 html {
-  background: var(--bg-color);
+  height: 100%;
+  background:
+    radial-gradient(circle at top, var(--page-glow), transparent 30%),
+    linear-gradient(180deg, var(--page-shine), transparent 22%),
+    var(--bg-color);
 }
 
 body {
-  background: var(--bg-color);
-  color: var(--fg-color);
-  font-family: var(--font-stack, monospace);
   margin: 0;
-  padding: 0;
-  min-height: 100vh;
+  min-height: 0;
+  background: transparent;
+  color: var(--fg-color);
+  font-family: var(--font-stack, "IBM Plex Mono", monospace);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .font-mono {
-  font-family: var(--font-stack, monospace);
+  font-family: var(--font-stack, "IBM Plex Mono", monospace);
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+.terminal-surface {
+  --terminal-scrollbar-track: color-mix(
+    in srgb,
+    var(--panel-inset) 88%,
+    var(--panel-color)
+  );
+  --terminal-scrollbar-thumb: color-mix(
+    in srgb,
+    var(--accent-color) 46%,
+    var(--panel-edge)
+  );
+  --terminal-scrollbar-thumb-hover: color-mix(
+    in srgb,
+    var(--accent-soft) 58%,
+    var(--panel-edge)
+  );
+  background:
+    linear-gradient(
+      180deg,
+      transparent 0,
+      transparent 10px,
+      var(--scanline-color) 11px,
+      transparent 12px
+    ),
+    linear-gradient(180deg, var(--surface-sheen), transparent 18%),
+    var(--panel-color);
+  background-size: 100% 12px, 100% 100%, auto;
+  content-visibility: auto;
+  scrollbar-color: var(--terminal-scrollbar-thumb) var(--terminal-scrollbar-track);
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
 }
 
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.terminal-surface::-webkit-scrollbar {
+  width: 0.85rem;
+}
+
+.terminal-surface::-webkit-scrollbar-track {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--surface-sheen) 78%, transparent),
+      var(--terminal-scrollbar-track)
+    );
+  border-left: 1px solid color-mix(in srgb, var(--panel-edge) 75%, transparent);
+}
+
+.terminal-surface::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--accent-soft) 34%, var(--terminal-scrollbar-thumb)),
+      var(--terminal-scrollbar-thumb)
+    );
+  border: 2px solid var(--panel-color);
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-soft) 22%, transparent);
+}
+
+.terminal-surface::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(
+        in srgb,
+        var(--accent-soft) 40%,
+        var(--terminal-scrollbar-thumb-hover)
+      ),
+      var(--terminal-scrollbar-thumb-hover)
+    );
+}
+
+.terminal-surface::-webkit-scrollbar-corner {
+  background: var(--terminal-scrollbar-track);
+}
+
+::selection {
+  background: var(--accent-color);
+  color: var(--panel-color);
 }
