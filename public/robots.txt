@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# AI agents: machine-readable portfolio content at /llms.txt

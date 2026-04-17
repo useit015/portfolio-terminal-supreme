@@ -1,0 +1,121 @@
+# Oussama Nahiz — Terminal Portfolio
+
+> Senior Full-Stack Engineer. 9+ years shipping production software across React, Node.js, TypeScript, and AI. 42 Network graduate. Based in Casablanca, Morocco. Open to senior, staff, and founding engineer roles.
+
+## Identity
+
+- Name: Oussama Nahiz
+- Role: Senior Full-Stack Engineer
+- Location: Casablanca Metropolitan Area, Morocco
+- Email: useit015@gmail.com
+- GitHub: https://github.com/useit015
+- LinkedIn: https://linkedin.com/in/useit015
+- Toptal profile: https://www.toptal.com/developers/resume/oussama-nahiz
+
+## Summary
+
+I work best on end-to-end product problems: architecture, infrastructure, front end, testing, deployment, and the messy delivery work around them. I am optimizing for teams that value technical depth, calm execution, and someone who can move from messy requirements to shipped software without waiting for perfect conditions.
+
+## Skills
+
+**Core stack:** TypeScript, JavaScript, React, Next.js, Node.js, HTML/CSS
+
+**Backend and data:** NestJS, Express, PostgreSQL, MongoDB, Redis, REST APIs
+
+**Cloud and delivery:** AWS SAM, Lambda, API Gateway, S3, Docker, CI/CD
+
+**AI and ML-adjacent:** OpenAI APIs, OpenRouter, Replicate, FAL, annotation workflows, OCR/KYC flows
+
+**Breadth signals:** React Native, Pixi.js 8, Three.js, WebRTC, Web3.js, Unix/Linux
+
+## Experience
+
+### Independent — AI Developer & Researcher (Oct 2024 – Present)
+Building AI developer tools, experimental web software, and real-time interactive systems.
+- Built whichmodel, an open-source TypeScript CLI for choosing AI models across providers.
+- Built souk-fighter, a browser fighting game with Pixi.js 8, React 19, and Tailwind 4.
+- Ongoing 3D engine work and public-safe Web3 tooling curiosity.
+
+### Acurai — Senior Software Developer (Jan 2025 – Jun 2025)
+Shipped the main front-end product surface for an AI startup focused on reducing hallucinations.
+- Owned and shipped Chat, Wiki, and Brain Builder.
+- Worked across TypeScript, Next.js, Node.js, and AI integration workflows.
+
+### LendStack — Co-Founder & CTO (Oct 2023 – May 2024)
+Co-founded a microfinance operating system and led the technical side from zero to live pilots.
+- Led a 9-person engineering team inside a 14-person startup.
+- Shipped to 2 live pilot clients in Zambia with 12 prospects in the pipeline.
+- Owned architecture across Next.js, Node.js microservices, KYC, OCR, and AI-assisted workflows.
+
+### Toptal Clients — Senior Software Engineer (Apr 2022 – Oct 2024)
+Delivered 8 engagements for clients including Blue River Technology, Axion Ray, and What's Next Media.
+- Built Clicky Clicky for Blue River's See & Spray computer-vision workflow.
+- Handled rescue-style fixes, migrations, and delivery pressure across unfamiliar codebases.
+- Built data-visualization experiences and backend integrations for connected-economy reporting.
+
+### VO2 Group — Senior Software Engineer (Jan 2021 – Jan 2022)
+Delivered enterprise software across healthcare and health-tech products.
+- Solo-built the Radiometer Course Creator on React, Node.js, TypeScript, AWS SAM, and PostgreSQL.
+- Led a 3-engineer team on AXA Health Keeper and its migration from Quasar/Vue to React and React Native.
+
+## Education
+
+**42 Senior Degree in Computer Science**
+1337 (42 Network), Khouribga, Morocco — 2018–2023
+Peer-reviewed, project-based program with strong low-level systems, Unix, networking, and algorithmic foundations.
+
+**European Bachelor's Degree in Computer Science: Networks and Security**
+FEDE, Mohammedia, Morocco — 2014–2015
+Network architecture, TCP/IP, cryptography, and systems security.
+
+## Projects
+
+### whichmodel (open source)
+TypeScript CLI for choosing the right AI model across OpenRouter, FAL, and Replicate.
+Stack: TypeScript, Node.js, OpenRouter, Replicate, FAL
+MIT licensed. v1.0.0. 90+ commits.
+https://github.com/useit015/whichmodel
+
+### souk-fighter (game-tech)
+Browser fighting game with a custom asset format, character tooling, and fixed-timestep engine.
+Stack: React 19, Pixi.js 8, Tailwind CSS 4, IndexedDB
+A strong example of engine work, gameplay systems, and UI craft.
+https://github.com/useit015/souk-fighter
+
+### Radiometer Course Creator (enterprise health-tech)
+Course-authoring platform for Radiometer's AQURE healthcare ecosystem.
+Stack: React, Node.js, TypeScript, AWS SAM, PostgreSQL
+Built solo and helped close a six-figure enterprise deal.
+
+### Clicky Clicky (computer vision ops)
+Labeling tool and dashboard for See & Spray ground-truth collection.
+Stack: React, NestJS, MongoDB, Docker, Leaflet, AWS
+Built for Blue River Technology as part of a Toptal engagement.
+
+## Stats
+
+- 9+ years shipping product software across freelance work, enterprise teams, startups, and independent research
+- 8 Toptal engagements delivered across healthcare, insurance, media, agritech, and AI
+- 2 live pilot clients in Zambia (LendStack), 12 more in the pipeline
+- 1 six-figure enterprise solo build (Radiometer Course Creator)
+- 42 Network graduate (1337, Khouribga)
+- 9 engineers led directly at LendStack
+
+## Values
+
+- **Own the full product slice:** My highest-value work is end-to-end — architecture, infrastructure, front end, back end, testing, and shipping.
+- **Be the rescue engineer when it matters:** Comfortable walking into unfamiliar code under time pressure and turning it back into a working delivery lane.
+- **Build with constraints:** Bootstrapped startup work, solo builds, and client delivery taught me to move with the conditions in front of me.
+- **Keep curiosity alive:** I build some things because they should exist, and some things because I want to learn how they work.
+
+## Current Focus
+
+Shipping end-to-end product work while staying close to AI tooling, side projects, and game-engine experiments. Best fit: senior, staff, or founding-engineer roles where one person needs to own the vertical slice and keep momentum high.
+
+Current public side work: whichmodel, souk-fighter, and ongoing 3D graphics exploration.
+
+## Contact
+
+Email: useit015@gmail.com
+LinkedIn: https://linkedin.com/in/useit015
+GitHub: https://github.com/useit015

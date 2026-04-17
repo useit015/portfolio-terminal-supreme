@@ -5,6 +5,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: content.identity.title,
   description: content.identity.intro,
+  other: {
+    "llms-txt": "/llms.txt",
+  },
 };
 
 export default function RootLayout({

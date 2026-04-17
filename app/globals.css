@@ -68,10 +68,7 @@ body {
 
 html {
   height: 100%;
-  background:
-    radial-gradient(circle at top, var(--page-glow), transparent 30%),
-    linear-gradient(180deg, var(--page-shine), transparent 22%),
-    var(--bg-color);
+  background: var(--bg-color);
 }
 
 body {
@@ -114,9 +111,8 @@ body {
       var(--scanline-color) 11px,
       transparent 12px
     ),
-    linear-gradient(180deg, var(--surface-sheen), transparent 18%),
     var(--panel-color);
-  background-size: 100% 12px, 100% 100%, auto;
+  background-size: 100% 12px, auto;
   content-visibility: auto;
   scrollbar-color: var(--terminal-scrollbar-thumb) var(--terminal-scrollbar-track);
   scrollbar-gutter: stable;

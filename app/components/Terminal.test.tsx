@@ -192,7 +192,7 @@ describe('Terminal', () => {
     await user.keyboard('{Escape}');
     await user.type(input, 're');
     await user.tab();
-    expect(input).toHaveValue('re');
+    expect(input).toHaveValue('resume');
 
     await user.keyboard('{Escape}');
     await user.type(input, 'cd pr');
