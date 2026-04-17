@@ -5,6 +5,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: content.identity.title,
   description: content.identity.intro,
+  icons: {
+    icon: "/favicon.svg",
+  },
   other: {
     "llms-txt": "/llms.txt",
   },
