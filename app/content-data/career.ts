@@ -11,11 +11,11 @@ export const experience: PortfolioExperienceEntry[] = [
 		role: "AI Developer & Researcher",
 		period: "Oct 2024 - Present",
 		summary:
-			"Building AI developer tools, experimental web software, and real-time interactive systems.",
+			"Working on my own projects: AI tooling, browser games, and 3D engine experiments.",
 		bullets: [
-			"Built whichmodel, an open-source TypeScript CLI for choosing AI models across providers.",
+			"Built whichmodel, an open-source TypeScript CLI for comparing AI models across providers.",
 			"Built souk-fighter, a browser fighting game with Pixi.js 8, React 19, and Tailwind 4.",
-			"Kept exploring 3D engine work and public-safe Web3 tooling curiosity.",
+			"Still poking at Three.js and game engine work.",
 		],
 	},
 	{
@@ -23,10 +23,10 @@ export const experience: PortfolioExperienceEntry[] = [
 		role: "Senior Software Developer",
 		period: "Jan 2025 - Jun 2025",
 		summary:
-			"Shipped the main front-end product surface for an AI startup focused on reducing hallucinations.",
+			"Built the main product UI for an AI startup working on reducing LLM hallucinations.",
 		bullets: [
 			"Owned and shipped Chat, Wiki, and Brain Builder.",
-			"Worked across TypeScript, Next.js, Node.js, and AI integration workflows.",
+			"Worked across TypeScript, Next.js, Node.js, and AI integration.",
 		],
 	},
 	{
@@ -48,9 +48,9 @@ export const experience: PortfolioExperienceEntry[] = [
 		summary:
 			"Delivered 8 engagements for clients including Blue River Technology, Axion Ray, and What’s Next Media.",
 		bullets: [
-			"Built Clicky Clicky for Blue River’s See & Spray workflow.",
-			"Handled rescue-style fixes, migrations, and delivery pressure across unfamiliar codebases.",
-			"Built data-visualization experiences and backend integrations for connected-economy reporting.",
+			"Built Clicky Clicky for Blue River’s See & Spray precision agriculture workflow.",
+			"Handled rescue work, migrations, and deadline pressure in codebases I didn’t write.",
+			"Built data visualization and backend integrations for connected-economy reporting.",
 		],
 	},
 	{
@@ -58,7 +58,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		role: "Senior Software Engineer",
 		period: "Jan 2021 - Jan 2022",
 		summary:
-			"Delivered enterprise software across healthcare and health-tech products.",
+			"Shipped healthcare and health-tech software as the senior engineer on two products.",
 		bullets: [
 			"Solo-built the Radiometer Course Creator on React, Node.js, TypeScript, AWS SAM, and PostgreSQL.",
 			"Led a 3-engineer team on AXA Health Keeper and its migration from Quasar/Vue to React and React Native.",

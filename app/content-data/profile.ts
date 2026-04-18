@@ -180,22 +180,22 @@ export const values: ValueEntry[] = [
 	{
 		title: "Own the full product slice",
 		detail:
-			"My highest-value work tends to be end-to-end: architecture, infrastructure, front end, back end, testing, and shipping.",
+			"My best work is end-to-end: architecture, infrastructure, front end, back end, testing, and shipping. I'd rather own the whole thing than hand off at the edges.",
 	},
 	{
 		title: "Be the rescue engineer when it matters",
 		detail:
-			"I am comfortable walking into unfamiliar code under time pressure and turning it back into a working delivery lane.",
+			"I've walked into burning codebases under deadline pressure and turned them around. It's uncomfortable work and I'm used to it.",
 	},
 	{
 		title: "Build with constraints",
 		detail:
-			"Bootstrapped startup work, solo builds, and client delivery taught me to move with the conditions in front of me, not the ideal ones.",
+			"Bootstrapped startup work and client delivery taught me to ship with what's there, not wait for ideal conditions.",
 	},
 	{
 		title: "Keep curiosity alive",
 		detail:
-			"I build some things because they should exist, and some things because I want to learn how they work.",
+			"I build some things because they should exist, and some things because I want to understand how they work.",
 	},
 ];
 

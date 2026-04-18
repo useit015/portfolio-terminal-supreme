@@ -1,5 +1,5 @@
-import AppShell from "./components/AppShell";
+import Portfolio from "./components/portfolio/Portfolio";
 
 export default function Home() {
-  return <AppShell />;
+  return <Portfolio />;
 }

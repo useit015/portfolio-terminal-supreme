@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { PortfolioContent } from "../types";
 import { PromptLine } from "./terminal/prompt-line";
 import { useClock } from "./terminal/use-clock";
@@ -49,6 +50,13 @@ export default function Terminal({
 						session {clock || "--:--:--"}
 					</span>
 					<div className="min-w-0 flex-1" />
+					<Link
+						href="/"
+						onClick={(e) => e.stopPropagation()}
+						className="text-brand-muted hover:text-brand-accentSoft"
+					>
+						readable view ↗
+					</Link>
 					<span
 						aria-hidden
 						className="inline-flex items-center gap-2 text-brand-muted"

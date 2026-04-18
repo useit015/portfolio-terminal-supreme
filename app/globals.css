@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -42,6 +42,53 @@
 }
 
 :root {
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", "SF Mono", Consolas,
+    "Liberation Mono", Menlo, monospace;
+  --font-serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-lg: 18px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.08em;
+
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.02),
+    0 12px 32px rgba(1, 4, 9, 0.45);
+  --scanline-gap: 12px;
+
+  /* Default palette: espresso (matches scrollable portfolio default). */
+  --bg-color: #241c18;
+  --fg-color: #f5e6d3;
+  --panel-color: #2f2622;
+  --panel-edge: #5f4c42;
+  --panel-inset: #382d28;
+  --page-glow: rgba(245, 158, 11, 0.13);
+  --page-shine: rgba(255, 247, 237, 0.04);
+  --surface-sheen: rgba(251, 191, 36, 0.04);
+  --accent-color: #f59e0b;
+  --accent-soft: #fbbf24;
+  --muted-color: #c4a484;
+  --prompt-user: #f59e0b;
+  --prompt-host: #fde68a;
+  --prompt-input: #fff7ed;
+  --header-glow: #f59e0b;
+  --chrome-close: #ea580c;
+  --chrome-minimize: #f59e0b;
+  --chrome-maximize: #fbbf24;
+  --shadow-color: rgba(0, 0, 0, 0.32);
+  --scanline-color: rgba(255, 251, 235, 0.03);
+}
+
+[data-theme="dark"] {
   --bg-color: #0d1117;
   --fg-color: #d0d7de;
   --panel-color: #11161d;
@@ -53,6 +100,10 @@
   --accent-color: #3fb950;
   --accent-soft: #7ee787;
   --muted-color: #8b949e;
+  --prompt-user: #58a6ff;
+  --prompt-host: #7ee787;
+  --prompt-input: #d0d7de;
+  --header-glow: #3fb950;
   --chrome-close: #ef6b73;
   --chrome-minimize: #d29922;
   --chrome-maximize: #3fb950;
@@ -60,23 +111,153 @@
   --scanline-color: rgba(255, 255, 255, 0.03);
 }
 
-html,
-body {
-  height: 100%;
-  overflow: hidden;
+[data-theme="light"] {
+  --bg-color: #eef2f6;
+  --fg-color: #1f2937;
+  --panel-color: #ffffff;
+  --panel-edge: #cbd5e1;
+  --panel-inset: #f8fafc;
+  --page-glow: rgba(20, 184, 166, 0.1);
+  --page-shine: rgba(15, 118, 110, 0.05);
+  --surface-sheen: rgba(15, 23, 42, 0.03);
+  --accent-color: #0f766e;
+  --accent-soft: #0ea5a4;
+  --muted-color: #64748b;
+  --prompt-user: #0f766e;
+  --prompt-host: #334155;
+  --prompt-input: #0f172a;
+  --header-glow: #14b8a6;
+  --chrome-close: #ef4444;
+  --chrome-minimize: #f59e0b;
+  --chrome-maximize: #14b8a6;
+  --shadow-color: rgba(15, 23, 42, 0.12);
+  --scanline-color: rgba(15, 23, 42, 0.02);
+}
+
+[data-theme="blue-matrix"] {
+  --bg-color: #050816;
+  --fg-color: #dbeafe;
+  --panel-color: #09101f;
+  --panel-edge: #1d4ed8;
+  --panel-inset: #0c1427;
+  --page-glow: rgba(34, 211, 238, 0.16);
+  --page-shine: rgba(96, 165, 250, 0.06);
+  --surface-sheen: rgba(56, 189, 248, 0.04);
+  --accent-color: #22d3ee;
+  --accent-soft: #67e8f9;
+  --muted-color: #7dd3fc;
+  --prompt-user: #38bdf8;
+  --prompt-host: #67e8f9;
+  --prompt-input: #e0f2fe;
+  --header-glow: #22d3ee;
+  --chrome-close: #38bdf8;
+  --chrome-minimize: #22d3ee;
+  --chrome-maximize: #67e8f9;
+  --shadow-color: rgba(8, 47, 73, 0.35);
+  --scanline-color: rgba(34, 211, 238, 0.05);
+}
+
+[data-theme="espresso"] {
+  --bg-color: #241c18;
+  --fg-color: #f5e6d3;
+  --panel-color: #2f2622;
+  --panel-edge: #5f4c42;
+  --panel-inset: #382d28;
+  --page-glow: rgba(245, 158, 11, 0.13);
+  --page-shine: rgba(255, 247, 237, 0.04);
+  --surface-sheen: rgba(251, 191, 36, 0.04);
+  --accent-color: #f59e0b;
+  --accent-soft: #fbbf24;
+  --muted-color: #c4a484;
+  --prompt-user: #f59e0b;
+  --prompt-host: #fde68a;
+  --prompt-input: #fff7ed;
+  --header-glow: #f59e0b;
+  --chrome-close: #ea580c;
+  --chrome-minimize: #f59e0b;
+  --chrome-maximize: #fbbf24;
+  --shadow-color: rgba(0, 0, 0, 0.32);
+  --scanline-color: rgba(255, 251, 235, 0.03);
+}
+
+[data-theme="gruvbox"] {
+  --bg-color: #282828;
+  --fg-color: #ebdbb2;
+  --panel-color: #32302f;
+  --panel-edge: #504945;
+  --panel-inset: #3c3836;
+  --page-glow: rgba(250, 189, 47, 0.14);
+  --page-shine: rgba(131, 165, 152, 0.05);
+  --surface-sheen: rgba(146, 131, 116, 0.05);
+  --accent-color: #fabd2f;
+  --accent-soft: #fe8019;
+  --muted-color: #a89984;
+  --prompt-user: #83a598;
+  --prompt-host: #b8bb26;
+  --prompt-input: #fbf1c7;
+  --header-glow: #fe8019;
+  --chrome-close: #fb4934;
+  --chrome-minimize: #fabd2f;
+  --chrome-maximize: #b8bb26;
+  --shadow-color: rgba(20, 19, 18, 0.36);
+  --scanline-color: rgba(235, 219, 178, 0.03);
+}
+
+[data-theme="material-palenight"] {
+  --bg-color: #292d3e;
+  --fg-color: #a6accd;
+  --panel-color: #25293a;
+  --panel-edge: #444267;
+  --panel-inset: #2f334d;
+  --page-glow: rgba(130, 170, 255, 0.12);
+  --page-shine: rgba(199, 146, 234, 0.06);
+  --surface-sheen: rgba(130, 170, 255, 0.04);
+  --accent-color: #c792ea;
+  --accent-soft: #89ddff;
+  --muted-color: #717cb4;
+  --prompt-user: #82aaff;
+  --prompt-host: #c3e88d;
+  --prompt-input: #eeffff;
+  --header-glow: #89ddff;
+  --chrome-close: #f07178;
+  --chrome-minimize: #ffcb6b;
+  --chrome-maximize: #c3e88d;
+  --shadow-color: rgba(24, 28, 43, 0.42);
+  --scanline-color: rgba(137, 221, 255, 0.04);
+}
+
+[data-theme="atom-one-dark"] {
+  --bg-color: #282c34;
+  --fg-color: #abb2bf;
+  --panel-color: #21252b;
+  --panel-edge: #3b4048;
+  --panel-inset: #2c313c;
+  --page-glow: rgba(97, 175, 239, 0.13);
+  --page-shine: rgba(152, 195, 121, 0.05);
+  --surface-sheen: rgba(198, 120, 221, 0.04);
+  --accent-color: #61afef;
+  --accent-soft: #98c379;
+  --muted-color: #5c6370;
+  --prompt-user: #61afef;
+  --prompt-host: #98c379;
+  --prompt-input: #dcdfe4;
+  --header-glow: #c678dd;
+  --chrome-close: #e06c75;
+  --chrome-minimize: #e5c07b;
+  --chrome-maximize: #98c379;
+  --shadow-color: rgba(16, 18, 22, 0.4);
+  --scanline-color: rgba(171, 178, 191, 0.03);
 }
 
 html {
-  height: 100%;
   background: var(--bg-color);
 }
 
 body {
   margin: 0;
-  min-height: 0;
   background: transparent;
   color: var(--fg-color);
-  font-family: var(--font-stack, "IBM Plex Mono", monospace);
+  font-family: var(--font-stack, var(--font-mono));
 }
 
 * {
@@ -84,7 +265,13 @@ body {
 }
 
 .font-mono {
-  font-family: var(--font-stack, "IBM Plex Mono", monospace);
+  font-family: var(--font-stack, var(--font-mono));
+}
+
+.terminal-route,
+.terminal-route body {
+  height: 100%;
+  overflow: hidden;
 }
 
 .terminal-surface {
