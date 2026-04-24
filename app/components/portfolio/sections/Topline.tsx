@@ -8,7 +8,7 @@ export default function Topline({ email }: { email: string }) {
         available for work
       </span>
       <span className="right">
-        <Link href="/terminal">terminal ↗</Link>
+        <Link href="/terminal" aria-label="Open terminal view">terminal ↗</Link>
         <a href={`mailto:${email}`}>{email}</a>
       </span>
     </div>

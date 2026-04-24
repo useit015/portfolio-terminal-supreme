@@ -38,6 +38,7 @@ export default function Work({ projects }: Props) {
                       href={p.link}
                       target={isExternal ? "_blank" : undefined}
                       rel={isExternal ? "noopener" : undefined}
+                      aria-label={`View ${p.name} project on ${host}`}
                     >
                       {host} ↗
                     </a>

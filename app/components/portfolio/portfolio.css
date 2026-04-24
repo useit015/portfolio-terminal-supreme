@@ -173,6 +173,7 @@ html[data-scanline="on"] body.portfolio-body::after {
 }
 
 .plain {
+  text-wrap: pretty;
   font-family: var(--body-font);
   font-size: clamp(18px, 1.8vw, 20px);
   line-height: 1.5;
@@ -189,6 +190,7 @@ html[data-scanline="on"] body.portfolio-body::after {
 }
 
 .prose p {
+  text-wrap: pretty;
   font-family: var(--body-font);
   font-size: var(--body-size);
   line-height: var(--body-lh);
@@ -225,6 +227,7 @@ html[data-scanline="on"] body.portfolio-body::after {
   color: var(--accent-color);
 }
 .hero-lede {
+  text-wrap: pretty;
   font-family: var(--body-font);
   font-size: clamp(20px, 2.2vw, 24px);
   line-height: 1.45;
@@ -390,6 +393,7 @@ html[data-scanline="on"] body.portfolio-body::after {
   font-weight: var(--fw-regular);
 }
 .tl-body {
+  text-wrap: pretty;
   font-family: var(--body-font);
   font-size: var(--body-size);
   line-height: var(--body-lh);
@@ -624,7 +628,7 @@ html[data-scanline="on"] body.portfolio-body::after {
 .ts-dot {
   width: 8px;
   height: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid color-mix(in srgb, var(--panel-edge) 25%, transparent);
   display: block;
   flex-shrink: 0;
 }
@@ -650,5 +654,124 @@ html[data-scanline="on"] body.portfolio-body::after {
   .theme-switcher {
     bottom: 12px;
     right: 12px;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  z-index: 100;
+  padding: 8px 14px;
+  background: var(--accent-color);
+  color: var(--bg-color);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: top 200ms ease;
+}
+.skip-link:focus {
+  top: 20px;
+}
+
+/* Focus-visible rings */
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Cursor states */
+a, button, [role="button"], .ts-toggle, .ts-swatch {
+  cursor: pointer;
+}
+
+/* Entrance animations */
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.stagger-1 { animation-delay: 60ms; }
+.stagger-2 { animation-delay: 120ms; }
+.stagger-3 { animation-delay: 180ms; }
+.stagger-4 { animation-delay: 240ms; }
+.stagger-5 { animation-delay: 300ms; }
+.stagger-6 { animation-delay: 360ms; }
+
+/* Delight — hover lifts & active press */
+.delight-link {
+  transition: transform 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.delight-link:active {
+  transform: translateY(0.5px);
+}
+.delight-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.delight-card:hover {
+  transform: translateY(-2px);
+}
+.delight-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.delight-btn:hover {
+  transform: translateY(-1px);
+}
+.delight-btn:active {
+  transform: translateY(0.5px) scale(0.98);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .stagger-1,
+  .stagger-2,
+  .stagger-3,
+  .stagger-4,
+  .stagger-5,
+  .stagger-6 {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .delight-link,
+  .delight-card,
+  .delight-btn {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Focus-visible utility for components that need explicit ring control */
+.focus-visible-ring:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+    opacity: 1;
+  }
+  .p-caret {
+    animation: none;
+    opacity: 1;
   }
 }

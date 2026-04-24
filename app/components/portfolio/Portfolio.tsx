@@ -51,16 +51,22 @@ export default function Portfolio() {
 
   return (
     <>
-      <div className="portfolio-page">
+      <a
+        href="#main-content"
+        className="skip-link"
+      >
+        skip to main content
+      </a>
+      <main className="portfolio-page" id="main-content">
         <Topline email={identity.email} />
-        <Hero />
-        <About values={values} />
-        <Work projects={projects} />
-        <Experience experience={experience} />
-        <Skills />
-        <Contact email={identity.email} socials={socials} />
+        <div className="animate-fade-in-up stagger-1"><Hero /></div>
+        <div className="animate-fade-in-up stagger-2"><About values={values} /></div>
+        <div className="animate-fade-in-up stagger-3"><Work projects={projects} /></div>
+        <div className="animate-fade-in-up stagger-4"><Experience experience={experience} /></div>
+        <div className="animate-fade-in-up stagger-5"><Skills /></div>
+        <div className="animate-fade-in-up stagger-6"><Contact email={identity.email} socials={socials} /></div>
         <Footer />
-      </div>
+      </main>
       <ThemeSwitcher
         themes={themePresets}
         active={theme}

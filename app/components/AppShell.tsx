@@ -71,6 +71,7 @@ export default function AppShell() {
 			className="h-full overflow-hidden bg-brand-background text-brand-foreground"
 			data-testid="app-shell"
 			style={themeStyle}
+			aria-label="Terminal interface"
 		>
 			<Terminal
 				activeThemeName={activeThemeName}

@@ -53,7 +53,7 @@ export default function Terminal({
 					<Link
 						href="/"
 						onClick={(e) => e.stopPropagation()}
-						className="text-brand-muted hover:text-brand-accentSoft"
+						className="rounded-sm text-brand-muted hover:text-brand-accentSoft focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--panel-color)]"
 					>
 						readable view ↗
 					</Link>
@@ -71,6 +71,9 @@ export default function Terminal({
 					className="terminal-surface min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-5 md:px-8 md:py-6"
 					data-testid="terminal-scroll-region"
 					onScroll={syncAutoScrollPreference}
+					role="log"
+					aria-live="polite"
+					aria-label="Terminal output"
 				>
 					<div className="space-y-6">
 						{entries.map((entry, index) => (
@@ -111,7 +114,7 @@ export default function Terminal({
 							autoCorrect="off"
 							autoCapitalize="off"
 							spellCheck={false}
-							className="mt-[1px] min-w-0 flex-1 bg-transparent text-sm text-[var(--prompt-input)] caret-[var(--header-glow)] outline-none md:text-base"
+							className="mt-[1px] min-w-0 flex-1 bg-transparent text-sm text-[var(--prompt-input)] caret-[var(--header-glow)] outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--panel-color)] md:text-base rounded-sm"
 						/>
 					</div>
 				</div>

@@ -22,7 +22,7 @@ export default function ThemeSwitcher({ themes, active, onChange }: Props) {
     <div className={`theme-switcher${open ? " ts-open" : ""}`}>
       <button
         type="button"
-        className="ts-toggle"
+        className="ts-toggle focus-visible-ring"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
       >
@@ -42,7 +42,7 @@ export default function ThemeSwitcher({ themes, active, onChange }: Props) {
             <button
               key={t.name}
               type="button"
-              className="ts-swatch"
+              className="ts-swatch focus-visible-ring"
               aria-pressed={active === t.name}
               aria-label={t.label}
               title={t.label}

@@ -19,13 +19,13 @@ export default function Contact({ email, socials }: Props) {
         </a>
       </h2>
       <div className="links-row">
-        <a className="link-btn" href={`mailto:${email}`}>
+        <a className="link-btn delight-btn" href={`mailto:${email}`}>
           email me <span className="arrow">→</span>
         </a>
         {socials.map((s) => (
           <a
             key={s.id}
-            className="link-btn"
+            className="link-btn delight-btn"
             href={s.href}
             target="_blank"
             rel="noopener"
