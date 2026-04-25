@@ -27,10 +27,14 @@ export default function Portfolio() {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    const landingTheme = chooseLandingTheme(
-      themeNames,
-      readLandingTheme(window.localStorage),
-    );
+    const previousLandingTheme = readLandingTheme(window.localStorage);
+    const preHydratedTheme = document.documentElement.getAttribute("data-theme");
+    const landingTheme =
+      preHydratedTheme &&
+      themeNames.includes(preHydratedTheme) &&
+      preHydratedTheme === previousLandingTheme
+        ? preHydratedTheme
+        : chooseLandingTheme(themeNames, previousLandingTheme);
 
     if (landingTheme) {
       setTheme(landingTheme);

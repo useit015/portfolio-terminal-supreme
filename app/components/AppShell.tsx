@@ -23,10 +23,14 @@ export default function AppShell() {
 	const themeStyle = getThemeStyle(activeTheme.tokens);
 
 	useEffect(() => {
-		const landingTheme = chooseLandingTheme(
-			themeNames,
-			readLandingTheme(window.localStorage),
-		);
+		const previousLandingTheme = readLandingTheme(window.localStorage);
+		const preHydratedTheme = document.documentElement.getAttribute("data-theme");
+		const landingTheme =
+			preHydratedTheme &&
+			themeNames.includes(preHydratedTheme) &&
+			preHydratedTheme === previousLandingTheme
+				? preHydratedTheme
+				: chooseLandingTheme(themeNames, previousLandingTheme);
 
 		if (landingTheme) {
 			setActiveThemeName(landingTheme);

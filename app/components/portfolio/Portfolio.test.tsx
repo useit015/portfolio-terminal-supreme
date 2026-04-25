@@ -56,13 +56,14 @@ describe('Portfolio', () => {
     await waitFor(() => expect(screen.getByRole('button', { name: /gruvbox/i })).toHaveAttribute('aria-pressed', 'true'));
   });
 
-  it('lands on a different automatic theme than the previous page load', async () => {
-    window.localStorage.setItem(LAST_LANDING_THEME_KEY, 'espresso');
+  it('uses the pre-hydration landing theme without rotating a second time', async () => {
+    window.localStorage.setItem(LAST_LANDING_THEME_KEY, 'blue-matrix');
+    document.documentElement.setAttribute('data-theme', 'blue-matrix');
     vi.spyOn(Math, 'random').mockReturnValue(0.99);
 
     render(<Portfolio />);
 
-    await waitFor(() => expect(document.documentElement).toHaveAttribute('data-theme', 'atom-one-dark'));
-    expect(window.localStorage.getItem(LAST_LANDING_THEME_KEY)).toBe('atom-one-dark');
+    await waitFor(() => expect(document.documentElement).toHaveAttribute('data-theme', 'blue-matrix'));
+    expect(window.localStorage.getItem(LAST_LANDING_THEME_KEY)).toBe('blue-matrix');
   });
 });
