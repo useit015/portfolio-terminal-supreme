@@ -57,12 +57,14 @@ describe('Terminal', () => {
     vi.unstubAllGlobals();
   });
 
-  it('renders the welcome command by default', () => {
+  it('renders the welcome command by default without the old live navbar badge', () => {
     renderTerminal();
 
     expect(screen.getByTestId('welcome')).toBeInTheDocument();
     expect(screen.getByText(/Version 1.0.0/i)).toBeInTheDocument();
     expect(screen.getByText(/Try `ls`, `tree`, or `grep react`/i)).toBeInTheDocument();
+    expect(screen.queryByRole('status', { name: /terminal session is live/i })).not.toBeInTheDocument();
+    expect(screen.queryByText(/^live$/i)).not.toBeInTheDocument();
   });
 
   it('renders the expanded public command surface', async () => {
@@ -152,11 +154,7 @@ describe('Terminal', () => {
     );
 
     await user.type(input, 'gui{enter}');
-    expect(window.open).toHaveBeenCalledWith(
-      'https://linkedin.com/in/useit015',
-      '_blank',
-      'noopener,noreferrer'
-    );
+    expect(window.open).toHaveBeenCalledWith('/', '_self');
 
     await user.type(input, 'projects go 1{enter}');
     expect(window.open).toHaveBeenCalledWith(

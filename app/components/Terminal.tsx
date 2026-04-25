@@ -57,14 +57,6 @@ export default function Terminal({
 					>
 						readable view ↗
 					</Link>
-					<span
-						aria-label="Terminal session is live"
-						className="inline-flex items-center gap-2 text-brand-muted"
-						role="status"
-					>
-						<span className="h-2 w-2 animate-pulse bg-brand-accent shadow-[0_0_12px_var(--accent-color)]" aria-hidden="true" />
-						live
-					</span>
 				</div>
 
 				<div

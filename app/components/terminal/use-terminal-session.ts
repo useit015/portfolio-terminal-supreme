@@ -136,7 +136,7 @@ export const useTerminalSession = ({
 		}
 
 		if (parsed.command === "gui") {
-			window.open(content.identity.guiUrl, "_blank", "noopener,noreferrer");
+			window.open("/", "_self");
 			return;
 		}
 
