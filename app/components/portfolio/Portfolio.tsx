@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from "react";
 import content from "../../content";
+import {
+  chooseLandingTheme,
+  readLandingTheme,
+  writeLandingTheme,
+} from "../../utils/theme-rotation";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
@@ -12,21 +17,27 @@ import Topline from "./sections/Topline";
 import ThemeSwitcher from "./ThemeSwitcher";
 import "./portfolio.css";
 
-const THEME_KEY = "portfolio-theme";
 const DEFAULT_THEME = "espresso";
 
 export default function Portfolio() {
   const { identity, experience, socials, themePresets } = content;
-  const themeNames = new Set(themePresets.map((t) => t.name));
+  const themeNames = themePresets.map((t) => t.name);
 
   const [theme, setTheme] = useState(DEFAULT_THEME);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem(THEME_KEY);
-      if (saved && themeNames.has(saved)) setTheme(saved);
-    } catch {}
+    const landingTheme = chooseLandingTheme(
+      themeNames,
+      readLandingTheme(window.localStorage),
+    );
+
+    if (landingTheme) {
+      setTheme(landingTheme);
+      document.documentElement.setAttribute("data-theme", landingTheme);
+      writeLandingTheme(window.localStorage, landingTheme);
+    }
+
     const root = document.documentElement;
     root.setAttribute("data-body", "mono");
     root.setAttribute("data-density", "roomy");
@@ -42,10 +53,12 @@ export default function Portfolio() {
   useEffect(() => {
     if (!hydrated) return;
     document.documentElement.setAttribute("data-theme", theme);
-    try {
-      window.localStorage.setItem(THEME_KEY, theme);
-    } catch {}
   }, [theme, hydrated]);
+
+  const handleThemeChange = (themeName: string) => {
+    setTheme(themeName);
+    writeLandingTheme(window.localStorage, themeName);
+  };
 
   return (
     <>
@@ -71,7 +84,7 @@ export default function Portfolio() {
       <ThemeSwitcher
         themes={themePresets}
         active={theme}
-        onChange={setTheme}
+        onChange={handleThemeChange}
       />
     </>
   );

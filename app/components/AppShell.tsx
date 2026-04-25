@@ -3,6 +3,11 @@
 import { useEffect, useState } from "react";
 import content from "../content";
 import {
+	chooseLandingTheme,
+	readLandingTheme,
+	writeLandingTheme,
+} from "../utils/theme-rotation";
+import {
 	getThemePreset,
 	getThemeStyle,
 	THEME_STYLE_KEYS,
@@ -13,8 +18,22 @@ const CONSOLE_ASCII = content.welcome.ascii.join("\n");
 
 export default function AppShell() {
 	const [activeThemeName, setActiveThemeName] = useState(content.defaultTheme);
+	const themeNames = content.themePresets.map((theme) => theme.name);
 	const activeTheme = getThemePreset(content, activeThemeName);
 	const themeStyle = getThemeStyle(activeTheme.tokens);
+
+	useEffect(() => {
+		const landingTheme = chooseLandingTheme(
+			themeNames,
+			readLandingTheme(window.localStorage),
+		);
+
+		if (landingTheme) {
+			setActiveThemeName(landingTheme);
+			writeLandingTheme(window.localStorage, landingTheme);
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	useEffect(() => {
 		const rootStyle = document.documentElement.style;
@@ -69,6 +88,11 @@ export default function AppShell() {
 		);
 	}, [activeTheme]);
 
+	const handleThemeChange = (themeName: string) => {
+		setActiveThemeName(themeName);
+		writeLandingTheme(window.localStorage, themeName);
+	};
+
 	return (
 		<main
 			className="h-full overflow-hidden bg-brand-background text-brand-foreground"
@@ -79,7 +103,7 @@ export default function AppShell() {
 			<Terminal
 				activeThemeName={activeThemeName}
 				content={content}
-				onThemeChange={setActiveThemeName}
+				onThemeChange={handleThemeChange}
 			/>
 		</main>
 	);

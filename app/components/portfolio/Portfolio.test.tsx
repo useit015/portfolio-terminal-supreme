@@ -1,9 +1,31 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { LAST_LANDING_THEME_KEY } from '../../utils/theme-rotation';
 import Portfolio from './Portfolio';
 
 describe('Portfolio', () => {
+  const storage = new Map<string, string>();
+
+  beforeEach(() => {
+    storage.clear();
+    Object.defineProperty(window, 'localStorage', {
+      configurable: true,
+      value: {
+        getItem: (key: string) => storage.get(key) ?? null,
+        setItem: (key: string, value: string) => storage.set(key, value),
+        removeItem: (key: string) => storage.delete(key),
+        clear: () => storage.clear(),
+      },
+    });
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+    storage.clear();
+    document.documentElement.removeAttribute('data-theme');
+  });
+
   it('exposes premium navigation landmarks and labelled sections', () => {
     render(<Portfolio />);
 
@@ -19,6 +41,7 @@ describe('Portfolio', () => {
   });
 
   it('links the theme toggle to its swatch panel and exposes status text', async () => {
+    vi.spyOn(Math, 'random').mockReturnValue(0.6);
     const user = userEvent.setup();
     render(<Portfolio />);
 
@@ -30,6 +53,16 @@ describe('Portfolio', () => {
 
     const panel = screen.getByRole('group', { name: /choose portfolio theme/i });
     expect(panel).toHaveAttribute('id', 'theme-switcher-panel');
-    expect(screen.getByRole('button', { name: /espresso/i })).toHaveAttribute('aria-pressed', 'true');
+    await waitFor(() => expect(screen.getByRole('button', { name: /gruvbox/i })).toHaveAttribute('aria-pressed', 'true'));
+  });
+
+  it('lands on a different automatic theme than the previous page load', async () => {
+    window.localStorage.setItem(LAST_LANDING_THEME_KEY, 'espresso');
+    vi.spyOn(Math, 'random').mockReturnValue(0.99);
+
+    render(<Portfolio />);
+
+    await waitFor(() => expect(document.documentElement).toHaveAttribute('data-theme', 'atom-one-dark'));
+    expect(window.localStorage.getItem(LAST_LANDING_THEME_KEY)).toBe('atom-one-dark');
   });
 });
