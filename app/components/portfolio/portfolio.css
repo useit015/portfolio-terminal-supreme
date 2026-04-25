@@ -73,19 +73,36 @@ html[data-scanline="on"] body.portfolio-body::after {
   color: var(--muted-color);
   margin: 0 auto 56px;
   max-width: var(--content-col);
+  min-height: 64px;
   padding: 13px 16px;
-  border-bottom: 1px solid var(--panel-edge);
-  border-top: 1px solid color-mix(in srgb, var(--panel-edge) 60%, transparent);
+  border: 1px solid color-mix(in srgb, var(--panel-edge) 80%, transparent);
   background: color-mix(in srgb, var(--panel-color) 76%, transparent);
   box-shadow: var(--shadow-card);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+  transition:
+    max-width 220ms ease,
+    min-height 220ms ease,
+    padding 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+.topline--compact {
+  max-width: min(620px, calc(100vw - 32px));
+  min-height: 46px;
+  padding: 6px 10px;
+  border-color: color-mix(in srgb, var(--panel-edge) 68%, transparent);
+  background: color-mix(in srgb, var(--panel-color) 88%, transparent);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--shadow-color) 38%, transparent);
+  transform: translateY(-4px);
 }
 .topline .terminal-prime {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 44px;
+  min-height: 36px;
   color: var(--accent-color);
   font-weight: var(--fw-semibold);
   text-decoration: none;

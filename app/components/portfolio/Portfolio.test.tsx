@@ -23,6 +23,10 @@ describe('Portfolio', () => {
   afterEach(() => {
     vi.restoreAllMocks();
     storage.clear();
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 0,
+    });
     document.documentElement.removeAttribute('data-theme');
   });
 
@@ -38,6 +42,21 @@ describe('Portfolio', () => {
     expect(screen.getByRole('region', { name: /contact/i })).toBeInTheDocument();
     expect(screen.queryByText(/available for work/i)).not.toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /terminal/i }).length).toBeGreaterThanOrEqual(2);
+  });
+
+  it('shrinks the sticky readable-view navbar after scrolling', async () => {
+    render(<Portfolio />);
+
+    const nav = screen.getByRole('navigation', { name: /portfolio navigation/i });
+    expect(nav).not.toHaveClass('topline--compact');
+
+    Object.defineProperty(window, 'scrollY', {
+      configurable: true,
+      value: 160,
+    });
+    window.dispatchEvent(new Event('scroll'));
+
+    await waitFor(() => expect(nav).toHaveClass('topline--compact'));
   });
 
   it('links the theme toggle to its swatch panel and exposes status text', async () => {

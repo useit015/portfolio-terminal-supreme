@@ -25,6 +25,7 @@ export default function Portfolio() {
 
   const [theme, setTheme] = useState(DEFAULT_THEME);
   const [hydrated, setHydrated] = useState(false);
+  const [navCompact, setNavCompact] = useState(false);
 
   useEffect(() => {
     const previousLandingTheme = readLandingTheme(window.localStorage);
@@ -55,6 +56,14 @@ export default function Portfolio() {
   }, []);
 
   useEffect(() => {
+    const updateNavState = () => setNavCompact(window.scrollY > 80);
+    updateNavState();
+    window.addEventListener("scroll", updateNavState, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateNavState);
+  }, []);
+
+  useEffect(() => {
     if (!hydrated) return;
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme, hydrated]);
@@ -77,7 +86,7 @@ export default function Portfolio() {
         id="main-content"
         aria-label="Scrollable portfolio"
       >
-        <Topline email={identity.email} />
+        <Topline email={identity.email} compact={navCompact} />
         <div className="animate-fade-in-up stagger-1"><Hero /></div>
         <div className="animate-fade-in-up stagger-2"><About /></div>
         <div className="animate-fade-in-up stagger-3"><Experience experience={experience} /></div>
