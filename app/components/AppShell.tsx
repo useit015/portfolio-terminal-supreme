@@ -34,37 +34,40 @@ export default function AppShell() {
 	}, [themeStyle]);
 
 	useEffect(() => {
+		const { tokens } = activeTheme;
+		const mono = "font-family:'Courier New',monospace;";
+
 		console.log(
 			`%c${CONSOLE_ASCII}`,
-			"color:#3fb950;background:#0d1117;font-family:'Courier New',monospace;font-size:7px;line-height:9px;padding:4px 0;display:block;",
+			`color:${tokens.accent};background:${tokens.background};${mono}font-size:7px;line-height:9px;padding:4px 0;display:block;`,
 		);
 		console.log(
 			"%coussama%c@%cterminal",
-			"color:#58a6ff;font-weight:bold;font-size:14px;font-family:monospace;",
-			"color:#8b949e;font-size:14px;font-family:monospace;",
-			"color:#7ee787;font-weight:bold;font-size:14px;font-family:monospace;",
+			`color:${tokens.promptUser};font-weight:bold;font-size:14px;${mono}`,
+			`color:${tokens.muted};font-size:14px;${mono}`,
+			`color:${tokens.promptHost};font-weight:bold;font-size:14px;${mono}`,
 		);
 		console.log(
 			"%cYou found the console. That's the right instinct.",
-			"color:#8b949e;font-size:12px;",
+			`color:${tokens.muted};font-size:12px;`,
 		);
 		console.log(
 			"%c→  useit015@gmail.com",
-			"color:#3fb950;font-size:12px;font-family:monospace;",
+			`color:${tokens.accent};font-size:12px;${mono}`,
 		);
 		console.log(
 			"%c→  github.com/useit015",
-			"color:#3fb950;font-size:12px;font-family:monospace;",
+			`color:${tokens.accent};font-size:12px;${mono}`,
 		);
 		console.log(
 			"%c─────────────────────────────────────────────────",
-			"color:#30363d;font-size:12px;",
+			`color:${tokens.panelEdge};font-size:12px;`,
 		);
 		console.log(
 			"%cTry `neofetch` in the terminal. Or just keep digging.",
-			"color:#8b949e;font-size:11px;font-style:italic;",
+			`color:${tokens.muted};font-size:11px;font-style:italic;`,
 		);
-	}, []);
+	}, [activeTheme]);
 
 	return (
 		<main

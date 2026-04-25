@@ -7,12 +7,16 @@ type Props = {
 
 export default function Work({ projects }: Props) {
   return (
-    <section className="portfolio-section" id="work">
+    <section
+      className="portfolio-section"
+      id="work"
+      aria-label="Selected work"
+    >
       <PromptLine path="~/work" cmd="ls projects/" />
-      <h2 className="section-title">Things I&apos;ve built and shipped.</h2>
+      <h2 className="section-title" id="work-title">Things I&apos;ve built and shipped.</h2>
       <p className="plain">
-        A small, honest selection. Two are public and you can try them. Two
-        shipped into production at paying clients.
+        A small, honest selection. Two are public and you can inspect the code.
+        Two shipped into production at paying enterprise clients.
       </p>
 
       <div className="projects">
@@ -22,7 +26,7 @@ export default function Work({ projects }: Props) {
             : null;
           const isExternal = !!p.link && p.link.startsWith("http");
           return (
-            <article key={p.id} className="project">
+            <article key={p.id} className="project delight-card">
               <div className="num">{String(i + 1).padStart(2, "0")}</div>
               <div>
                 <div className="project-tag">

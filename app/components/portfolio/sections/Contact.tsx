@@ -9,9 +9,13 @@ type Props = {
 export default function Contact({ email, socials }: Props) {
   const [user, domain] = email.split("@");
   return (
-    <section className="portfolio-section contact" id="contact">
+    <section
+      className="portfolio-section contact"
+      id="contact"
+      aria-label="Contact"
+    >
       <PromptLine path="~/contact" cmd="cat contact.md" />
-      <h2>
+      <h2 id="contact-title">
         <a href={`mailto:${email}`}>
           {user}
           <span className="at">@</span>

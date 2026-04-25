@@ -37,8 +37,8 @@ export default function Terminal({
 			data-theme={activeThemeName}
 			onClick={focusInput}
 		>
-			<div className="flex h-full min-h-0 w-full flex-col overflow-hidden border-y border-brand-panelEdge bg-brand-panel">
-				<div className="flex items-center gap-4 border-b border-brand-panelEdge bg-brand-panel px-4 py-2 text-sm md:px-8">
+			<div className="flex h-full min-h-0 w-full flex-col overflow-hidden border-y border-brand-panelEdge bg-brand-panel shadow-[0_18px_60px_color-mix(in_srgb,var(--shadow-color)_70%,transparent)]">
+				<div className="flex items-center gap-4 border-b border-brand-panelEdge bg-[color-mix(in_srgb,var(--panel-color)_88%,var(--panel-inset))] px-4 py-2 text-sm md:px-8">
 					<span
 						className="font-semibold text-brand-accent"
 						data-testid="chrome-close"
@@ -53,15 +53,16 @@ export default function Terminal({
 					<Link
 						href="/"
 						onClick={(e) => e.stopPropagation()}
-						className="rounded-sm text-brand-muted hover:text-brand-accentSoft focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--panel-color)]"
+						className="border-b border-dashed border-[color-mix(in_srgb,var(--muted-color)_34%,transparent)] text-brand-muted transition-colors hover:border-brand-accentSoft hover:text-brand-accentSoft focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--panel-color)]"
 					>
 						readable view ↗
 					</Link>
 					<span
-						aria-hidden
+						aria-label="Terminal session is live"
 						className="inline-flex items-center gap-2 text-brand-muted"
+						role="status"
 					>
-						<span className="h-1.5 w-1.5 animate-pulse bg-brand-accent" />
+						<span className="h-2 w-2 animate-pulse bg-brand-accent shadow-[0_0_12px_var(--accent-color)]" aria-hidden="true" />
 						live
 					</span>
 				</div>
@@ -91,7 +92,7 @@ export default function Terminal({
 					</div>
 				</div>
 
-				<div className="border-t border-brand-panelEdge/70 bg-brand-panel px-4 py-3 md:px-8 md:py-4">
+				<div className="border-t border-brand-panelEdge/70 bg-[color-mix(in_srgb,var(--panel-color)_88%,var(--panel-inset))] px-4 py-3 md:px-8 md:py-4">
 					{hints.length > 0 ? (
 						<div className="mb-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-brand-muted">
 							{hints.map((hint) => (
@@ -100,7 +101,7 @@ export default function Terminal({
 						</div>
 					) : null}
 
-					<div className="flex items-start gap-2">
+					<div className="flex items-start gap-2 border border-brand-panelEdge/70 bg-[color-mix(in_srgb,var(--panel-inset)_54%,transparent)] px-3 py-2 shadow-[inset_0_1px_0_color-mix(in_srgb,var(--fg-color)_5%,transparent)] focus-within:border-brand-accent focus-within:shadow-[0_0_0_1px_color-mix(in_srgb,var(--accent-color)_35%,transparent)]">
 						<PromptLine identity={content.identity} path={promptPath} />
 						<input
 							ref={inputRef}
@@ -114,7 +115,7 @@ export default function Terminal({
 							autoCorrect="off"
 							autoCapitalize="off"
 							spellCheck={false}
-							className="mt-[1px] min-w-0 flex-1 bg-transparent text-sm text-[var(--prompt-input)] caret-[var(--header-glow)] outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--panel-color)] md:text-base rounded-sm"
+							className="mt-[1px] min-w-0 flex-1 cursor-text bg-transparent text-sm text-[var(--prompt-input)] caret-[var(--header-glow)] outline-none md:text-base"
 						/>
 					</div>
 				</div>

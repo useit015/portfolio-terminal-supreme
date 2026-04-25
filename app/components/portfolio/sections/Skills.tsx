@@ -36,7 +36,7 @@ const SKILL_GROUPS: SkillEntry[] = [
   {
     head: "ship AI features that actually work",
     plain:
-      "Integrating language models, image generation, and document workflows into real products. Not demos.",
+      "Integrating LLMs, model selection, document workflows, OCR/KYC, and AI product surfaces into real software. Not demo confetti.",
     tags: [
       "OpenAI",
       "OpenRouter",
@@ -49,7 +49,7 @@ const SKILL_GROUPS: SkillEntry[] = [
   {
     head: "interactive & game-tech",
     plain:
-      "Real-time apps, browser games, 3D, and video/audio. Less common territory, more interesting to work in.",
+      "Real-time apps, browser games, graphics, and low-level interaction work. Less common territory, more interesting to work in.",
     tags: ["Pixi.js 8", "Three.js", "WebRTC", "Web3.js"],
   },
   {
@@ -62,9 +62,13 @@ const SKILL_GROUPS: SkillEntry[] = [
 
 export default function Skills() {
   return (
-    <section className="portfolio-section" id="skills">
+    <section
+      className="portfolio-section"
+      id="skills"
+      aria-label="Skills"
+    >
       <PromptLine path="~/skills" cmd={'grep -r "can_do"'} />
-      <h2 className="section-title">What I can do.</h2>
+      <h2 className="section-title" id="skills-title">What I can do.</h2>
       <p className="plain">
         Plain description first, tool names after. Both kinds of people read
         this.
@@ -72,7 +76,7 @@ export default function Skills() {
 
       <div className="skills">
         {SKILL_GROUPS.map((s, i) => (
-          <div key={s.head} className="skill">
+          <div key={s.head} className="skill delight-card">
             <div className="s-num">{String(i + 1).padStart(2, "0")}</div>
             <div>
               <div className="skill-head">{s.head}</div>

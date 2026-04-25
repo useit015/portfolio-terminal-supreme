@@ -9,7 +9,6 @@ import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import Skills from "./sections/Skills";
 import Topline from "./sections/Topline";
-import Work from "./sections/Work";
 import ThemeSwitcher from "./ThemeSwitcher";
 import "./portfolio.css";
 
@@ -17,8 +16,7 @@ const THEME_KEY = "portfolio-theme";
 const DEFAULT_THEME = "espresso";
 
 export default function Portfolio() {
-  const { identity, values, projects, experience, socials, themePresets } =
-    content;
+  const { identity, experience, socials, themePresets } = content;
   const themeNames = new Set(themePresets.map((t) => t.name));
 
   const [theme, setTheme] = useState(DEFAULT_THEME);
@@ -57,14 +55,17 @@ export default function Portfolio() {
       >
         skip to main content
       </a>
-      <main className="portfolio-page" id="main-content">
+      <main
+        className="portfolio-page"
+        id="main-content"
+        aria-label="Scrollable portfolio"
+      >
         <Topline email={identity.email} />
         <div className="animate-fade-in-up stagger-1"><Hero /></div>
-        <div className="animate-fade-in-up stagger-2"><About values={values} /></div>
-        <div className="animate-fade-in-up stagger-3"><Work projects={projects} /></div>
-        <div className="animate-fade-in-up stagger-4"><Experience experience={experience} /></div>
-        <div className="animate-fade-in-up stagger-5"><Skills /></div>
-        <div className="animate-fade-in-up stagger-6"><Contact email={identity.email} socials={socials} /></div>
+        <div className="animate-fade-in-up stagger-2"><About /></div>
+        <div className="animate-fade-in-up stagger-3"><Experience experience={experience} /></div>
+        <div className="animate-fade-in-up stagger-4"><Skills /></div>
+        <div className="animate-fade-in-up stagger-5"><Contact email={identity.email} socials={socials} /></div>
         <Footer />
       </main>
       <ThemeSwitcher

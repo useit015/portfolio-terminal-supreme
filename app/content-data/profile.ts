@@ -19,9 +19,9 @@ export const identity: PortfolioContent["identity"] = {
 	intro:
 		"Senior full-stack engineer and 42-grad with 9+ years shipping production software across React, Node.js, TypeScript, and AI.",
 	summary:
-		"I work best on end-to-end product problems: architecture, infrastructure, front end, testing, deployment, and the messy delivery work around them.",
+		"I own the full product slice: architecture, infrastructure, front end, backend services, testing, deployment, and the delivery glue between them.",
 	availability:
-		"Open to senior, staff, and founding engineer roles, plus selective consulting where I can own a meaningful slice of product delivery.",
+		"Open to senior, staff, founding-engineer, and selective client work where I can own a meaningful slice of product delivery.",
 	email: "useit015@gmail.com",
 	guiUrl: "https://linkedin.com/in/useit015",
 	homePath: "/home/oussama/portfolio",
@@ -120,9 +120,9 @@ export const socials: IndexedLink[] = [
 ];
 
 export const highlights: string[] = [
-	"Solo-built the Radiometer Course Creator and helped close a six-figure enterprise deal.",
-	"Led a 9-person engineering team as co-founder and CTO at LendStack.",
-	"Delivered 8 Toptal engagements across healthcare, insurance, media, agritech, and AI.",
+	"Solo-built the Radiometer Course Creator, delivered as part of a six-figure enterprise healthcare deal.",
+	"Led a 9-person engineering team as co-founder and CTO at LendStack, shipping to 2 live pilot clients.",
+	"Delivered 8 Toptal engagements across 7 clients in agriculture AI, insurance, fintech media, AI SaaS, and video.",
 ];
 
 export const skills: PortfolioSkillGroup[] = [
@@ -145,7 +145,7 @@ export const skills: PortfolioSkillGroup[] = [
 			"OpenRouter",
 			"Replicate",
 			"FAL",
-			"annotation workflows",
+			"LLM integration",
 			"OCR/KYC flows",
 		],
 	},
@@ -164,15 +164,15 @@ export const skills: PortfolioSkillGroup[] = [
 
 export const now: NowContent = {
 	headline:
-		"Shipping end-to-end product work while staying close to AI tooling, side projects, and game-engine experiments.",
+		"Building AI developer tools, product systems, browser-game experiments, and selective client work while staying hands-on with React, Node.js, and TypeScript.",
 	buildMode:
-		"Best fit: senior, staff, or founding-engineer roles where one person needs to own the vertical slice and keep momentum high.",
+		"Best fit: senior, staff, or founding-engineer roles where one person needs to turn messy requirements into a shipped product slice.",
 	summary:
-		"I am optimizing for teams that value technical depth, calm execution, and someone who can move from messy requirements to shipped software without waiting for perfect conditions.",
+		"I am optimizing for teams that value technical depth, calm execution, and someone who can move from ambiguity to production without waiting for perfect conditions.",
 	bullets: [
-		"Open to senior, staff, and founding engineer roles.",
-		"Current public side work: whichmodel, souk-fighter, and ongoing 3D graphics exploration.",
-		"Strongest in product teams that need both architecture judgment and hands-on delivery.",
+		"Open to senior, staff, founding-engineer, and selective consulting roles.",
+		"Current public side work: whichmodel, souk-fighter, and ongoing Three.js / game-engine exploration.",
+		"Strongest in product teams that need architecture judgment and hands-on delivery in the same person.",
 	],
 };
 
@@ -204,17 +204,17 @@ export const stats: StatEntry[] = [
 		value: "9+",
 		label: "years shipping product software",
 		detail:
-			"Across freelance work, enterprise teams, startups, and independent research.",
+			"Across freelance work, enterprise teams, startups, Toptal engagements, and independent AI/product projects.",
 	},
 	{
 		value: "8",
 		label: "Toptal engagements delivered",
-		detail: "Healthcare, insurance, media, agritech, AI, and emergency fixes.",
+		detail: "Across 7 clients in agriculture AI, insurance, fintech media, DLT, AI SaaS, and video.",
 	},
 	{
 		value: "2",
 		label: "live Zambia pilot clients",
-		detail: "LendStack reached production with 12 more prospects in the pipeline.",
+		detail: "LendStack reached production pilots with 12 more prospects in the pipeline.",
 	},
 	{
 		value: "1",

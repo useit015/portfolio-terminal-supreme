@@ -2,15 +2,14 @@ import Link from "next/link";
 
 export default function Topline({ email }: { email: string }) {
   return (
-    <div className="topline">
-      <span className="mark">
-        <span className="pulse" />
-        available for work
-      </span>
+    <nav className="topline" aria-label="Portfolio navigation">
+      <Link href="/terminal" className="terminal-prime" aria-label="Open interactive terminal portfolio">
+        <span className="pulse" aria-hidden="true" />
+        terminal portfolio ↗
+      </Link>
       <span className="right">
-        <Link href="/terminal" aria-label="Open terminal view">terminal ↗</Link>
         <a href={`mailto:${email}`}>{email}</a>
       </span>
-    </div>
+    </nav>
   );
 }

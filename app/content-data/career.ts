@@ -11,22 +11,22 @@ export const experience: PortfolioExperienceEntry[] = [
 		role: "AI Developer & Researcher",
 		period: "Oct 2024 - Present",
 		summary:
-			"Working on my own projects: AI tooling, browser games, and 3D engine experiments.",
+			"Building independent AI and product-engineering work across model tooling, browser games, and graphics experiments.",
 		bullets: [
-			"Built whichmodel, an open-source TypeScript CLI for comparing AI models across providers.",
-			"Built souk-fighter, a browser fighting game with Pixi.js 8, React 19, and Tailwind 4.",
-			"Still poking at Three.js and game engine work.",
+			"Authored whichmodel, an MIT-licensed TypeScript CLI for choosing AI models across OpenRouter, FAL, and Replicate.",
+			"Built souk-fighter, a KOF-style browser fighting game with Pixi.js 8, React 19, Tailwind CSS 4, and a custom .sfpack asset format.",
+			"Continuing Three.js and game-engine exploration while taking on selective product/client work.",
 		],
 	},
 	{
 		company: "Acurai",
-		role: "Senior Software Developer",
+		role: "Senior Software Engineer",
 		period: "Jan 2025 - Jun 2025",
 		summary:
-			"Built the main product UI for an AI startup working on reducing LLM hallucinations.",
+			"Built the product UI for an AI startup focused on reducing hallucinations in large language models.",
 		bullets: [
-			"Owned and shipped Chat, Wiki, and Brain Builder.",
-			"Worked across TypeScript, Next.js, Node.js, and AI integration.",
+			"Shipped the front-end product surface across Chat, Wiki, and Brain Builder.",
+			"Worked across TypeScript, Next.js, Node.js, and OpenAI-integrated workflows.",
 		],
 	},
 	{
@@ -46,11 +46,11 @@ export const experience: PortfolioExperienceEntry[] = [
 		role: "Senior Software Engineer",
 		period: "Apr 2022 - Oct 2024",
 		summary:
-			"Delivered 8 engagements for clients including Blue River Technology, Axion Ray, and What’s Next Media.",
+			"Delivered 8 engagements across 7 clients including Blue River Technology, Axion Ray, What's Next Media, and Top Shelf Insurance.",
 		bullets: [
-			"Built Clicky Clicky for Blue River’s See & Spray precision agriculture workflow.",
-			"Handled rescue work, migrations, and deadline pressure in codebases I didn’t write.",
-			"Built data visualization and backend integrations for connected-economy reporting.",
+			"Solo-built Clicky Clicky for Blue River's See & Spray ground-truth collection workflow.",
+			"Built AI SaaS configuration tooling, connected-economy data visualization, insurance systems, and rescue fixes in codebases I did not write.",
+			"Worked across React, Node.js, TypeScript, MongoDB, AWS, data visualization, image annotation, and backend integrations.",
 		],
 	},
 	{
@@ -60,8 +60,21 @@ export const experience: PortfolioExperienceEntry[] = [
 		summary:
 			"Shipped healthcare and health-tech software as the senior engineer on two products.",
 		bullets: [
-			"Solo-built the Radiometer Course Creator on React, Node.js, TypeScript, AWS SAM, and PostgreSQL.",
-			"Led a 3-engineer team on AXA Health Keeper and its migration from Quasar/Vue to React and React Native.",
+			"Solo-built the Radiometer Course Creator on React, Node.js, TypeScript, AWS SAM, and PostgreSQL as part of a six-figure enterprise deal.",
+			"Led a 3-engineer rebuild of AXA Health Keeper and its migration from Quasar/Vue to React and React Native.",
+			"Built an in-house JavaScript API layer for AQURE that saved about $20K per year in licensing.",
+		],
+	},
+	{
+		company: "Caronae Systems",
+		role: "Senior Software Engineer",
+		period: "Apr 2020 - Sep 2020",
+		summary:
+			"Led front-end work for a no-code KYC journey builder and owned identity-verification integrations.",
+		bullets: [
+			"Led a 3-engineer front-end team building journey-authoring workflows.",
+			"Solo-built the runtime front end for JSON-defined verification journeys.",
+			"Owned integrations for government ID recognition, face match, and liveness checks.",
 		],
 	},
 ];
@@ -76,7 +89,7 @@ export const education: EducationEntry[] = [
 	},
 	{
 		degree:
-			"European Bachelor’s Degree in Computer Science: Networks and Security",
+			"European Bachelor's Degree in Computer Science: Networks and Security",
 		institution: "FEDE, Mohammedia, Morocco",
 		period: "2014 - 2015",
 		detail:
@@ -90,7 +103,7 @@ export const projects: PortfolioProject[] = [
 		name: "whichmodel",
 		tag: "open source",
 		description:
-			"A TypeScript CLI for choosing the right AI model across OpenRouter, FAL, and Replicate.",
+			"A TypeScript CLI that recommends the right AI model for a task across OpenRouter, FAL, and Replicate.",
 		stack: ["TypeScript", "Node.js", "OpenRouter", "Replicate", "FAL"],
 		outcome: "MIT licensed. v1.0.0. 90+ commits.",
 		link: "https://github.com/useit015/whichmodel",
@@ -100,9 +113,9 @@ export const projects: PortfolioProject[] = [
 		name: "souk-fighter",
 		tag: "game-tech",
 		description:
-			"A browser fighting game with a custom asset format, character tooling, and fixed-timestep engine.",
+			"A KOF-style browser fighting game with a custom .sfpack bundle format, character tooling, and fixed-timestep engine.",
 		stack: ["React 19", "Pixi.js 8", "Tailwind CSS 4", "IndexedDB"],
-		outcome: "A strong example of engine work, gameplay systems, and UI craft.",
+		outcome: "Shows engine work, gameplay systems, asset tooling, and UI craft.",
 		link: "https://github.com/useit015/souk-fighter",
 	},
 	{
@@ -110,20 +123,20 @@ export const projects: PortfolioProject[] = [
 		name: "Radiometer Course Creator",
 		tag: "enterprise health-tech",
 		description:
-			"A course-authoring platform for Radiometer’s AQURE healthcare ecosystem.",
+			"A course-authoring platform for Radiometer's AQURE healthcare ecosystem, solo-built end to end.",
 		stack: ["React", "Node.js", "TypeScript", "AWS SAM", "PostgreSQL"],
-		outcome: "Built solo and helped close a six-figure enterprise deal.",
-		link: "https://github.com/useit015",
+		outcome: "Delivered as part of a six-figure enterprise deal.",
+		link: "https://www.toptal.com/developers/resume/oussama-nahiz",
 	},
 	{
 		id: 4,
 		name: "Clicky Clicky",
 		tag: "computer vision ops",
 		description:
-			"A labeling tool and dashboard for See & Spray ground-truth collection.",
+			"A labeling tool and dashboard for Blue River Technology's See & Spray boom-height ground-truth workflow.",
 		stack: ["React", "NestJS", "MongoDB", "Docker", "Leaflet", "AWS"],
-		outcome: "Built for Blue River Technology as part of a Toptal engagement.",
-		link: "https://github.com/useit015",
+		outcome: "Solo-built for Blue River Technology, a John Deere-acquired agricultural AI company.",
+		link: "https://www.toptal.com/developers/resume/oussama-nahiz",
 	},
 ];
 

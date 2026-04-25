@@ -20,11 +20,15 @@ export default function ThemeSwitcher({ themes, active, onChange }: Props) {
 
   return (
     <div className={`theme-switcher${open ? " ts-open" : ""}`}>
+      <span className="sr-only" aria-live="polite">
+        Current theme: {activePreset?.label ?? active}
+      </span>
       <button
         type="button"
         className="ts-toggle focus-visible-ring"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
+        aria-controls="theme-switcher-panel"
       >
         <span className="ts-toggle-label">theme</span>
         {!open && activePreset && (
@@ -37,7 +41,12 @@ export default function ThemeSwitcher({ themes, active, onChange }: Props) {
         <span className="ts-chevron">{open ? "▲" : "▼"}</span>
       </button>
       {open && (
-        <div className="ts-grid">
+        <div
+          className="ts-grid"
+          id="theme-switcher-panel"
+          role="group"
+          aria-label="Choose portfolio theme"
+        >
           {themes.map((t) => (
             <button
               key={t.name}

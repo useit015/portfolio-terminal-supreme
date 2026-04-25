@@ -7,9 +7,13 @@ type Props = {
 
 export default function Experience({ experience }: Props) {
   return (
-    <section className="portfolio-section" id="experience">
+    <section
+      className="portfolio-section"
+      id="experience"
+      aria-label="Experience"
+    >
       <PromptLine path="~/experience" cmd="git log --oneline" />
-      <h2 className="section-title">Where I&apos;ve worked, in reverse order.</h2>
+      <h2 className="section-title" id="experience-title">Where I&apos;ve worked, in reverse order.</h2>
       <p className="plain">
         The short version. For each one: what the company did, what I did there,
         and what shipped.
