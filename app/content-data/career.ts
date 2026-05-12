@@ -10,7 +10,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "Acurai",
 		role: "Senior Software Engineer",
 		period: "Jan 2025 - Jun 2025",
-		website: "https://acurai.ai/",
+		website: "https://acur.ai/",
 		summary:
 			"Built the product UI for an AI startup focused on reducing hallucinations in large language models.",
 		bullets: [
@@ -22,7 +22,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "LendStack",
 		role: "Co-Founder & CTO",
 		period: "Oct 2023 - May 2024",
-		website: "https://www.lendstack.in/",
+		website: "https://www.linkedin.com/company/lendstack",
 		summary:
 			"Co-founded a microfinance operating system and led the technical side from zero to live pilots.",
 		bullets: [
@@ -48,7 +48,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "Axion Ray",
 		role: "Senior Software Engineer",
 		period: "May 2024 - Oct 2024",
-		website: "https://www.axionray.com/",
+		website: "https://www.axion.com/",
 		summary:
 			"Built AI-powered SaaS configuration tooling for the data-operations module as part of a small product-focused team.",
 		bullets: [
@@ -101,7 +101,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "Spotbills",
 		role: "Full-stack Developer",
 		period: "Sep 2020 - Dec 2020",
-		website: "https://spotbills.com/our-companies",
+		website: "https://www.linkedin.com/company/spotbills/",
 		summary:
 			"Built real-time communication infrastructure for Peer, a hybrid mobile chat, file-sharing, and audio/video calling app.",
 		bullets: [

@@ -40,13 +40,13 @@ This portfolio is maintained from a career source-of-truth vault with canonical 
 ## Experience
 
 ### Acurai — Senior Software Developer (Jan 2025 – Jun 2025)
-Website: https://acurai.ai/
+Website: https://acur.ai/
 Shipped the main front-end product surface for an AI startup focused on reducing hallucinations.
 - Owned and shipped Chat, Wiki, and Brain Builder.
 - Worked across TypeScript, Next.js, Node.js, and AI integration workflows.
 
 ### LendStack — Co-Founder & CTO (Oct 2023 – May 2024)
-Website: https://www.lendstack.in/
+Company link: https://www.linkedin.com/company/lendstack
 Co-founded a microfinance operating system and led the technical side from zero to live pilots.
 - Led a 9-person engineering team inside a 14-person startup.
 - Shipped to 2 live pilot clients in Zambia with 12 prospects in the pipeline.
@@ -60,7 +60,7 @@ Worked through Toptal across 8 engagements and 7 clients over 30 months, spannin
 - Delivered several engagements in parallel with startup and product leadership work.
 
 ### Axion Ray — Senior Software Engineer (May 2024 – Oct 2024)
-Website: https://www.axionray.com/
+Website: https://www.axion.com/
 Built AI-powered SaaS configuration tooling for the data-operations module as part of a small product-focused team.
 - Built reusable UI components including checkboxes, file uploaders, and radio controls.
 - Wired backend integrations into the React front end on a Node.js and MongoDB stack.
@@ -88,7 +88,7 @@ Delivered enterprise software across healthcare and health-tech products.
 - Led a 3-engineer team on AXA Health Keeper and its migration from Quasar/Vue to React and React Native.
 
 ### Spotbills — Full-stack Developer (Sep 2020 – Dec 2020)
-Website: https://spotbills.com/our-companies
+Company link: https://www.linkedin.com/company/spotbills/
 Built real-time infrastructure for Peer, a hybrid mobile chat, file-sharing, and audio/video calling app.
 - Built the signaling server with NestJS, TypeScript, Redis, MongoDB, Socket.IO, and WebRTC.
 - Contributed to architecture, development, testing, and deployment for the Flutter-based mobile app.

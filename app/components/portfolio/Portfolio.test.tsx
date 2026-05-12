@@ -52,13 +52,25 @@ describe('Portfolio', () => {
     expect(screen.queryByText(/evidence-backed/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/cat source/i)).not.toBeInTheDocument();
     expect(screen.getAllByText(/top 3% talent/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByRole('link', { name: /Acurai/i })[0]).toHaveAttribute(
+      'href',
+      'https://acur.ai/'
+    );
+    expect(screen.getAllByRole('link', { name: /LendStack/i })[0]).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/company/lendstack'
+    );
     expect(screen.getAllByRole('link', { name: /Axion Ray/i })[0]).toHaveAttribute(
       'href',
-      'https://www.axionray.com/'
+      'https://www.axion.com/'
     );
     expect(screen.getAllByRole('link', { name: /Blue River Technology/i })[0]).toHaveAttribute(
       'href',
       'https://www.bluerivertechnology.com/'
+    );
+    expect(screen.getAllByRole('link', { name: /Spotbills/i })[0]).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/company/spotbills/'
     );
     expect(screen.getByRole('link', { name: /hire me/i })).toHaveAttribute(
       'href',
