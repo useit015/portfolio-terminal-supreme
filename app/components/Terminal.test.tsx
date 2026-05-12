@@ -92,7 +92,14 @@ describe('Terminal', () => {
     expect(await screen.findByTestId('skills')).toBeInTheDocument();
 
     await user.type(input, 'experience{enter}');
-    expect(await screen.findByTestId('experience')).toBeInTheDocument();
+    const experience = await screen.findByTestId('experience');
+    expect(experience).toHaveTextContent('Toptal');
+    expect(experience).toHaveTextContent('Axion Ray');
+    expect(experience).toHaveTextContent("What's Next Media");
+    expect(experience).toHaveTextContent('Blue River Technology');
+    expect(experience).toHaveTextContent('Spotbills');
+    expect(experience).toHaveTextContent('SQLI Digital Experience');
+    expect(experience).toHaveTextContent('Independent / Freelance');
 
     await user.type(input, 'lab{enter}');
     expect(await screen.findByTestId('lab')).toBeInTheDocument();

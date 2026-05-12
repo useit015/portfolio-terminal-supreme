@@ -56,16 +56,58 @@ Co-founded a microfinance operating system and led the technical side from zero 
 - Shipped to 2 live pilot clients in Zambia with 12 prospects in the pipeline.
 - Owned architecture across Next.js, Node.js microservices, KYC, OCR, and AI-assisted workflows.
 
-### Toptal Clients — Senior Software Engineer (Apr 2022 – Oct 2024)
-Delivered 8 engagements for clients including Blue River Technology, Axion Ray, and What's Next Media.
-- Built Clicky Clicky for Blue River's See & Spray computer-vision workflow.
-- Handled rescue-style fixes, migrations, and delivery pressure across unfamiliar codebases.
-- Built data-visualization experiences and backend integrations for connected-economy reporting.
+### Toptal — Senior Software Engineer (Apr 2022 – Oct 2024)
+Worked through Toptal across 8 engagements and 7 clients over 30 months, spanning agricultural AI, insurance, media, fintech, data visualization, and AI SaaS.
+- Delivered senior full-stack work across React, Node.js, TypeScript, MongoDB, AWS, and data-visualization stacks.
+- Worked with clients including Blue River Technology, Axion Ray, What's Next Media, Top Shelf Insurance, DSF OpCo, Amina El Abed, and iTech Insurance.
+- Delivered several engagements in parallel with startup and product leadership work.
+
+### Axion Ray — Senior Software Engineer (Contract via Toptal) (May 2024 – Oct 2024)
+Built AI-powered SaaS configuration tooling for the data-operations module as part of a small product-focused team.
+- Built reusable UI components including checkboxes, file uploaders, and radio controls.
+- Wired backend integrations into the React front end on a Node.js and MongoDB stack.
+- Delivered features across a React, TypeScript, Node.js, and MongoDB codebase.
+
+### What's Next Media — Senior Software Engineer (Contract via Toptal) (Sep 2023 – Jan 2024)
+Built interactive data products for reporting on payments and the connected economy.
+- Built interactive data-visualization components in React.
+- Implemented server-side Node.js work with SQL, MongoDB, and third-party APIs.
+- Shipped editorial-grade visualizations designed for readability and reuse.
+
+### Blue River Technology — Senior Software Engineer (Contract via Toptal) (Apr 2022 – Aug 2022)
+Built tooling for See & Spray computer-vision ground-truth data collection at the John Deere-acquired agricultural AI company.
+- Solo-built Clicky Clicky, a web labeling tool for See & Spray boom-height data collection.
+- Built the dashboard for creating jobs, assigning work, and collecting labeling results.
+- Deployed the tooling and validated output against Radar measurements.
+- Migrated the Spyglass platform from vanilla JavaScript to React while fixing existing bugs.
 
 ### VO2 Group — Senior Software Engineer (Jan 2021 – Jan 2022)
 Delivered enterprise software across healthcare and health-tech products.
 - Solo-built the Radiometer Course Creator on React, Node.js, TypeScript, AWS SAM, and PostgreSQL.
 - Led a 3-engineer team on AXA Health Keeper and its migration from Quasar/Vue to React and React Native.
+
+### Spotbills — Full-stack Developer (Sep 2020 – Dec 2020)
+Built real-time infrastructure for Peer, a hybrid mobile chat, file-sharing, and audio/video calling app.
+- Built the signaling server with NestJS, TypeScript, Redis, MongoDB, Socket.IO, and WebRTC.
+- Contributed to architecture, development, testing, and deployment for the Flutter-based mobile app.
+
+### Caronae Systems — Senior Software Engineer (Apr 2020 – Sep 2020)
+Led front-end work and KYC integrations for Helloo's configurable verification flows.
+- Led a 3-engineer front-end team building a no-code journey builder for ID-verification flows.
+- Solo-built the runtime front end for JSON-defined verification journeys.
+- Owned integrations for government ID recognition, face match, and liveness checks.
+
+### SQLI Digital Experience — Senior Software Engineer (Feb 2020 – Jul 2020)
+Worked on the global Nespresso eCommerce platform inside a large multi-team delivery environment.
+- Implemented a checkout flow that let customers buy products without completing full account registration.
+- Wrote Jest and Enzyme tests for shipped features.
+- Helped modernize older AngularJS and jQuery parts of the codebase.
+
+### Independent / Freelance — Full-stack Developer (May 2016 – Dec 2019)
+Delivered client web projects before the later senior, startup, and Toptal chapters.
+- Built websites, landing pages, WordPress builds, Shopify storefronts, web portals, and internal tools.
+- Worked across PHP, Node.js, MySQL, Vue, React, WordPress, and Shopify depending on client needs.
+- Handled scoping, delivery, and direct client communication for local and international clients.
 
 ## Education
 

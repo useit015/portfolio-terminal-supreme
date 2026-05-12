@@ -38,6 +38,13 @@ describe('Portfolio', () => {
     expect(screen.getByRole('region', { name: /about/i })).toBeInTheDocument();
     expect(screen.queryByRole('region', { name: /selected work/i })).not.toBeInTheDocument();
     expect(screen.getByRole('region', { name: /experience/i })).toBeInTheDocument();
+    expect(screen.getAllByText(/^Toptal$/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Axion Ray/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/What's Next Media/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Blue River Technology/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Spotbills/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/SQLI Digital Experience/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(/Independent \/ Freelance/i).length).toBeGreaterThanOrEqual(1);
     expect(screen.getByRole('region', { name: /skills/i })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /contact/i })).toBeInTheDocument();
     expect(screen.queryByText(/evidence-backed/i)).not.toBeInTheDocument();

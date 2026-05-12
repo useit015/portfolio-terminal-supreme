@@ -42,15 +42,52 @@ export const experience: PortfolioExperienceEntry[] = [
 		],
 	},
 	{
-		company: "Toptal Clients",
+		company: "Toptal",
 		role: "Senior Software Engineer",
 		period: "Apr 2022 - Oct 2024",
 		summary:
-			"Delivered 8 engagements across 7 clients including Blue River Technology, Axion Ray, What's Next Media, and Top Shelf Insurance.",
+			"Worked through Toptal across 8 engagements and 7 clients over 30 months, spanning agricultural AI, insurance, media, fintech, data visualization, and AI SaaS.",
 		bullets: [
-			"Solo-built Clicky Clicky for Blue River's See & Spray ground-truth collection workflow.",
-			"Built AI SaaS configuration tooling, connected-economy data visualization, insurance systems, and rescue fixes in codebases I did not write.",
-			"Worked across React, Node.js, TypeScript, MongoDB, AWS, data visualization, image annotation, and backend integrations.",
+			"Delivered senior full-stack work across React, Node.js, TypeScript, MongoDB, AWS, and data-visualization stacks.",
+			"Worked with clients including Blue River Technology, Axion Ray, What's Next Media, Top Shelf Insurance, DSF OpCo, Amina El Abed, and iTech Insurance.",
+			"Delivered several engagements in parallel with startup and product leadership work.",
+		],
+	},
+	{
+		company: "Axion Ray",
+		role: "Senior Software Engineer (Contract via Toptal)",
+		period: "May 2024 - Oct 2024",
+		summary:
+			"Built AI-powered SaaS configuration tooling for the data-operations module as part of a small product-focused team.",
+		bullets: [
+			"Built reusable UI components including checkboxes, file uploaders, and radio controls.",
+			"Wired backend integrations into the React front end on a Node.js and MongoDB stack.",
+			"Delivered features across a React, TypeScript, Node.js, and MongoDB codebase.",
+		],
+	},
+	{
+		company: "What's Next Media",
+		role: "Senior Software Engineer (Contract via Toptal)",
+		period: "Sep 2023 - Jan 2024",
+		summary:
+			"Built interactive data products for reporting on payments and the connected economy.",
+		bullets: [
+			"Built interactive data-visualization components in React.",
+			"Implemented server-side Node.js work with SQL, MongoDB, and third-party APIs.",
+			"Shipped editorial-grade visualizations designed for readability and reuse.",
+		],
+	},
+	{
+		company: "Blue River Technology",
+		role: "Senior Software Engineer (Contract via Toptal)",
+		period: "Apr 2022 - Aug 2022",
+		summary:
+			"Built tooling for See & Spray computer-vision ground-truth data collection at the John Deere-acquired agricultural AI company.",
+		bullets: [
+			"Solo-built Clicky Clicky, a web labeling tool for See & Spray boom-height data collection.",
+			"Built the dashboard for creating jobs, assigning work, and collecting labeling results.",
+			"Deployed the tooling and validated output against Radar measurements.",
+			"Migrated the Spyglass platform from vanilla JavaScript to React while fixing existing bugs.",
 		],
 	},
 	{
@@ -66,6 +103,18 @@ export const experience: PortfolioExperienceEntry[] = [
 		],
 	},
 	{
+		company: "Spotbills",
+		role: "Full-stack Developer",
+		period: "Sep 2020 - Dec 2020",
+		summary:
+			"Built real-time communication infrastructure for Peer, a hybrid mobile chat, file-sharing, and audio/video calling app.",
+		bullets: [
+			"Built the signaling server with NestJS, TypeScript, Redis, MongoDB, Socket.IO, and WebRTC.",
+			"Participated in architecture, development, testing, and deployment for the Flutter-based mobile app.",
+			"Helped the team launch on schedule.",
+		],
+	},
+	{
 		company: "Caronae Systems",
 		role: "Senior Software Engineer",
 		period: "Apr 2020 - Sep 2020",
@@ -75,6 +124,30 @@ export const experience: PortfolioExperienceEntry[] = [
 			"Led a 3-engineer front-end team building journey-authoring workflows.",
 			"Solo-built the runtime front end for JSON-defined verification journeys.",
 			"Owned integrations for government ID recognition, face match, and liveness checks.",
+		],
+	},
+	{
+		company: "SQLI Digital Experience",
+		role: "Senior Software Engineer",
+		period: "Feb 2020 - Jul 2020",
+		summary:
+			"Worked on the global Nespresso eCommerce platform inside a large multi-team delivery environment.",
+		bullets: [
+			"Implemented a checkout flow that let customers buy products without completing full account registration.",
+			"Wrote Jest and Enzyme tests for shipped features.",
+			"Helped modernize older AngularJS and jQuery parts of the codebase.",
+		],
+	},
+	{
+		company: "Independent / Freelance",
+		role: "Full-stack Developer",
+		period: "May 2016 - Dec 2019",
+		summary:
+			"Delivered client web projects before the later senior, startup, and Toptal chapters.",
+		bullets: [
+			"Built websites, landing pages, WordPress builds, Shopify storefronts, web portals, and internal tools.",
+			"Worked across PHP, Node.js, MySQL, Vue, React, WordPress, and Shopify depending on client needs.",
+			"Handled scoping, delivery, and direct client communication for local and international clients.",
 		],
 	},
 ];
