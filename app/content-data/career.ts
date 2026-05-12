@@ -7,21 +7,10 @@ import {
 
 export const experience: PortfolioExperienceEntry[] = [
 	{
-		company: "Independent",
-		role: "AI Developer & Researcher",
-		period: "Oct 2024 - Present",
-		summary:
-			"Building independent AI and product-engineering work across model tooling, browser games, and graphics experiments.",
-		bullets: [
-			"Authored whichmodel, an MIT-licensed TypeScript CLI for choosing AI models across OpenRouter, FAL, and Replicate.",
-			"Built souk-fighter, a KOF-style browser fighting game with Pixi.js 8, React 19, Tailwind CSS 4, and a custom .sfpack asset format.",
-			"Continuing Three.js and game-engine exploration while taking on selective product/client work.",
-		],
-	},
-	{
 		company: "Acurai",
 		role: "Senior Software Engineer",
 		period: "Jan 2025 - Jun 2025",
+		website: "https://acurai.ai/",
 		summary:
 			"Built the product UI for an AI startup focused on reducing hallucinations in large language models.",
 		bullets: [
@@ -33,6 +22,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "LendStack",
 		role: "Co-Founder & CTO",
 		period: "Oct 2023 - May 2024",
+		website: "https://www.lendstack.in/",
 		summary:
 			"Co-founded a microfinance operating system and led the technical side from zero to live pilots.",
 		bullets: [
@@ -45,6 +35,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "Toptal",
 		role: "Senior Software Engineer",
 		period: "Apr 2022 - Oct 2024",
+		website: "https://www.toptal.com/",
 		summary:
 			"Worked through Toptal across 8 engagements and 7 clients over 30 months, spanning agricultural AI, insurance, media, fintech, data visualization, and AI SaaS.",
 		bullets: [
@@ -55,8 +46,9 @@ export const experience: PortfolioExperienceEntry[] = [
 	},
 	{
 		company: "Axion Ray",
-		role: "Senior Software Engineer (Contract via Toptal)",
+		role: "Senior Software Engineer",
 		period: "May 2024 - Oct 2024",
+		website: "https://www.axionray.com/",
 		summary:
 			"Built AI-powered SaaS configuration tooling for the data-operations module as part of a small product-focused team.",
 		bullets: [
@@ -67,8 +59,9 @@ export const experience: PortfolioExperienceEntry[] = [
 	},
 	{
 		company: "What's Next Media",
-		role: "Senior Software Engineer (Contract via Toptal)",
+		role: "Senior Software Engineer",
 		period: "Sep 2023 - Jan 2024",
+		website: "https://www.pymnts.com/",
 		summary:
 			"Built interactive data products for reporting on payments and the connected economy.",
 		bullets: [
@@ -79,8 +72,9 @@ export const experience: PortfolioExperienceEntry[] = [
 	},
 	{
 		company: "Blue River Technology",
-		role: "Senior Software Engineer (Contract via Toptal)",
+		role: "Senior Software Engineer",
 		period: "Apr 2022 - Aug 2022",
+		website: "https://www.bluerivertechnology.com/",
 		summary:
 			"Built tooling for See & Spray computer-vision ground-truth data collection at the John Deere-acquired agricultural AI company.",
 		bullets: [
@@ -94,6 +88,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "VO2 Group",
 		role: "Senior Software Engineer",
 		period: "Jan 2021 - Jan 2022",
+		website: "https://www.vo2-group.com/",
 		summary:
 			"Shipped healthcare and health-tech software as the senior engineer on two products.",
 		bullets: [
@@ -106,6 +101,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "Spotbills",
 		role: "Full-stack Developer",
 		period: "Sep 2020 - Dec 2020",
+		website: "https://spotbills.com/our-companies",
 		summary:
 			"Built real-time communication infrastructure for Peer, a hybrid mobile chat, file-sharing, and audio/video calling app.",
 		bullets: [
@@ -118,6 +114,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "Caronae Systems",
 		role: "Senior Software Engineer",
 		period: "Apr 2020 - Sep 2020",
+		website: "https://caronae.com/",
 		summary:
 			"Led front-end work for a no-code KYC journey builder and owned identity-verification integrations.",
 		bullets: [
@@ -130,6 +127,7 @@ export const experience: PortfolioExperienceEntry[] = [
 		company: "SQLI Digital Experience",
 		role: "Senior Software Engineer",
 		period: "Feb 2020 - Jul 2020",
+		website: "https://www.sqli.com/",
 		summary:
 			"Worked on the global Nespresso eCommerce platform inside a large multi-team delivery environment.",
 		bullets: [

@@ -36,11 +36,33 @@ export const renderExperience = (content: PortfolioContent) => (
 				<div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
 					<div>
 						<div className="text-base font-semibold text-brand-foreground">
-							{entry.role} @ {entry.company}
+							{entry.role} @{" "}
+							{entry.website ? (
+								<a
+									href={entry.website}
+									target="_blank"
+									rel="noopener noreferrer"
+									className={linkClassName}
+								>
+									{entry.company}
+								</a>
+							) : (
+								entry.company
+							)}
 						</div>
 						<div className="max-w-4xl text-sm leading-6 text-brand-muted">
 							{entry.summary}
 						</div>
+						{entry.website ? (
+							<a
+								href={entry.website}
+								target="_blank"
+								rel="noopener noreferrer"
+								className={`${linkClassName} mt-1 text-xs`}
+							>
+								{entry.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+							</a>
+						) : null}
 					</div>
 					<div className="text-xs uppercase tracking-[0.18em] text-brand-accentSoft">
 						{entry.period}

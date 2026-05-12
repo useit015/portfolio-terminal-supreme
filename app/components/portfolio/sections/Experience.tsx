@@ -5,6 +5,18 @@ type Props = {
   experience: PortfolioExperienceEntry[];
 };
 
+function CompanyName({ entry }: { entry: PortfolioExperienceEntry }) {
+  if (!entry.website) {
+    return <>{entry.company}</>;
+  }
+
+  return (
+    <a className="tl-company-link" href={entry.website} target="_blank" rel="noopener noreferrer">
+      {entry.company}
+    </a>
+  );
+}
+
 export default function Experience({ experience }: Props) {
   return (
     <section
@@ -24,10 +36,10 @@ export default function Experience({ experience }: Props) {
           <div key={`${e.company}-${e.period}`} className="tl-item">
             <div className="tl-meta">
               <span className="when">{e.period.toLowerCase()}</span>
-              <span>{e.company}</span>
+              <span><CompanyName entry={e} /></span>
             </div>
             <h3 className="tl-role">
-              {e.role} <span className="at">· {e.company}</span>
+              {e.role} <span className="at">· <CompanyName entry={e} /></span>
             </h3>
             <p className="tl-body">{e.summary}</p>
             <ul className="tl-bullets">

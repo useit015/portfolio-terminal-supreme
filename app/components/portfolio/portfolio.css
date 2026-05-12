@@ -633,6 +633,18 @@ html[data-scanline="on"] body.portfolio-body::after {
   color: var(--muted-color);
   font-weight: var(--fw-regular);
 }
+.tl-company-link {
+  color: inherit;
+  border-bottom: 1px dashed color-mix(in srgb, currentColor 34%, transparent);
+  text-decoration: none;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.tl-company-link:hover,
+.tl-company-link:focus-visible {
+  color: var(--accent-soft);
+  border-bottom-color: currentColor;
+  outline: none;
+}
 .tl-body {
   text-wrap: pretty;
   font-family: var(--body-font);

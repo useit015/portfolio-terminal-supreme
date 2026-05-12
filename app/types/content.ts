@@ -23,6 +23,7 @@ export interface PortfolioExperienceEntry {
 	company: string;
 	role: string;
 	period: string;
+	website?: string;
 	summary: string;
 	bullets: string[];
 }

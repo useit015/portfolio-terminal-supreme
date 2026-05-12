@@ -66,7 +66,19 @@ export const renderAbout = (content: PortfolioContent) => (
 					{content.experience.slice(0, 4).map((entry) => (
 						<div key={`${entry.company}-${entry.period}`} className="space-y-1">
 							<div className="text-sm font-semibold text-brand-foreground">
-								{entry.role} @ {entry.company}
+								{entry.role} @{" "}
+								{entry.website ? (
+									<a
+										href={entry.website}
+										target="_blank"
+										rel="noopener noreferrer"
+										className={linkClassName}
+									>
+										{entry.company}
+									</a>
+								) : (
+									entry.company
+								)}
 							</div>
 							<div className="text-xs uppercase tracking-[0.18em] text-brand-accentSoft">
 								{entry.period}
@@ -141,7 +153,19 @@ export const renderResume = (content: PortfolioContent) => (
 						className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-3"
 					>
 						<span className="font-semibold text-brand-foreground">
-							{entry.role} @ {entry.company}
+							{entry.role} @{" "}
+							{entry.website ? (
+								<a
+									href={entry.website}
+									target="_blank"
+									rel="noopener noreferrer"
+									className={linkClassName}
+								>
+									{entry.company}
+								</a>
+							) : (
+								entry.company
+							)}
 						</span>
 						<span className="text-xs uppercase tracking-[0.18em] text-brand-accentSoft">
 							{entry.period}

@@ -97,6 +97,8 @@ describe('Terminal', () => {
     expect(experience).toHaveTextContent('Axion Ray');
     expect(experience).toHaveTextContent("What's Next Media");
     expect(experience).toHaveTextContent('Blue River Technology');
+    expect(experience).not.toHaveTextContent('AI Developer & Researcher');
+    expect(experience).not.toHaveTextContent('Contract via Toptal');
     expect(experience).toHaveTextContent('Spotbills');
     expect(experience).toHaveTextContent('SQLI Digital Experience');
     expect(experience).toHaveTextContent('Independent / Freelance');

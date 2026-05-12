@@ -38,6 +38,8 @@ describe('Portfolio', () => {
     expect(screen.getByRole('region', { name: /about/i })).toBeInTheDocument();
     expect(screen.queryByRole('region', { name: /selected work/i })).not.toBeInTheDocument();
     expect(screen.getByRole('region', { name: /experience/i })).toBeInTheDocument();
+    expect(screen.queryByText(/AI Developer & Researcher/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Contract via Toptal/i)).not.toBeInTheDocument();
     expect(screen.getAllByText(/^Toptal$/i).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/Axion Ray/i).length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/What's Next Media/i).length).toBeGreaterThanOrEqual(1);
@@ -50,6 +52,14 @@ describe('Portfolio', () => {
     expect(screen.queryByText(/evidence-backed/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/cat source/i)).not.toBeInTheDocument();
     expect(screen.getAllByText(/top 3% talent/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByRole('link', { name: /Axion Ray/i })[0]).toHaveAttribute(
+      'href',
+      'https://www.axionray.com/'
+    );
+    expect(screen.getAllByRole('link', { name: /Blue River Technology/i })[0]).toHaveAttribute(
+      'href',
+      'https://www.bluerivertechnology.com/'
+    );
     expect(screen.getByRole('link', { name: /hire me/i })).toHaveAttribute(
       'href',
       'https://www.toptal.com/developers/resume/oussama-nahiz#qzrbyG'
