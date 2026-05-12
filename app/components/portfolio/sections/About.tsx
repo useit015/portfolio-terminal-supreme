@@ -1,5 +1,6 @@
 import type { PortfolioContent, StatEntry } from "../../../types";
 import PromptLine from "../PromptLine";
+import ToptalBadge from "../ToptalBadge";
 
 type Props = {
   identity: PortfolioContent["identity"];
@@ -24,13 +25,18 @@ export default function About({ identity, highlights, stats }: Props) {
         real, and somebody needs to own the full slice.
       </p>
 
-      <div className="about-highlights" aria-label="Career proof points">
-        {highlights.map((item) => (
-          <div key={item} className="about-proof">
-            <span aria-hidden="true">›</span>
-            <p>{item}</p>
-          </div>
-        ))}
+      <div className="about-proof-panel">
+        <div className="about-highlights" aria-label="Career proof points">
+          {highlights.map((item) => (
+            <div key={item} className="about-proof">
+              <span aria-hidden="true">›</span>
+              <p>{item}</p>
+            </div>
+          ))}
+        </div>
+        <aside className="about-badge" aria-label="Toptal verification">
+          <ToptalBadge />
+        </aside>
       </div>
 
       <div className="about-strip" aria-label="Career highlights">

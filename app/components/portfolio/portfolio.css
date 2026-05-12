@@ -338,11 +338,21 @@ html[data-scanline="on"] body.portfolio-body::after {
 .about-plain {
   max-width: 58ch;
 }
+.about-proof-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 30px;
+  align-items: center;
+  margin-top: var(--sp-block);
+}
 .about-highlights {
   display: grid;
   gap: 10px;
-  margin-top: var(--sp-block);
   max-width: 72ch;
+}
+.about-badge {
+  display: grid;
+  justify-items: center;
 }
 .about-proof {
   display: grid;
@@ -375,48 +385,6 @@ html[data-scanline="on"] body.portfolio-body::after {
   border: 1px solid var(--panel-edge);
   background: color-mix(in srgb, var(--panel-color) 30%, transparent);
   padding: 8px 10px;
-}
-
-/* Proof */
-.proof-plain {
-  max-width: 64ch;
-}
-.proof-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 28px;
-  align-items: start;
-}
-.proof-grid {
-  display: grid;
-  gap: 14px;
-  margin-top: var(--sp-block);
-  padding: 0;
-  list-style: none;
-}
-.proof-item {
-  position: relative;
-  display: grid;
-  grid-template-columns: 48px 1fr;
-  gap: 18px;
-  padding: 18px 20px;
-  border: 1px solid var(--panel-edge);
-  background: color-mix(in srgb, var(--panel-color) 52%, transparent);
-  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--fg-color) 4%, transparent);
-}
-.proof-num {
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  letter-spacing: var(--tracking-wider);
-  color: var(--muted-color);
-  padding-top: 2px;
-}
-.proof-item p {
-  margin: 0;
-  font-family: var(--body-font);
-  font-size: var(--body-size);
-  line-height: var(--body-lh);
-  color: var(--fg-color);
 }
 
 /* Toptal badge */
@@ -956,8 +924,9 @@ html[data-scanline="on"] body.portfolio-body::after {
     bottom: 12px;
     right: 12px;
   }
-  .proof-intro {
+  .about-proof-panel {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   .toptal-badge-shell {
     justify-self: center;
@@ -967,12 +936,10 @@ html[data-scanline="on"] body.portfolio-body::after {
 
 @media (max-width: 430px) {
   .project,
-  .proof-item,
   .skill {
     grid-template-columns: 1fr;
   }
   .project .num,
-  .proof-num,
   .skill .s-num {
     padding-top: 0;
   }
