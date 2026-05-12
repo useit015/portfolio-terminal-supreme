@@ -253,6 +253,28 @@ export const renderStats = (content: PortfolioContent) => (
 	</div>
 );
 
+export const renderSourceOfTruth = (content: PortfolioContent) => (
+	<div data-testid="source-of-truth" className="max-w-4xl space-y-4">
+		<div className="space-y-2">
+			{sectionLabel("Source")}
+			<p className="text-lg font-semibold leading-snug text-brand-foreground">
+				{content.sourceOfTruth.headline}
+			</p>
+			<p className="text-sm leading-7 text-brand-muted">
+				{content.sourceOfTruth.summary}
+			</p>
+		</div>
+		<div className="grid gap-2 text-sm leading-7 text-brand-foreground">
+			{content.sourceOfTruth.bullets.map((item) => (
+				<div key={item} className="flex gap-2">
+					<span className="shrink-0 select-none text-brand-muted">›</span>
+					<span>{item}</span>
+				</div>
+			))}
+		</div>
+	</div>
+);
+
 export const renderSkills = (content: PortfolioContent) => (
 	<div data-testid="skills" className="space-y-4">
 		{content.skills.map((group) => (
@@ -260,6 +282,11 @@ export const renderSkills = (content: PortfolioContent) => (
 				<div className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-accentSoft">
 					{group.category}
 				</div>
+				{group.description ? (
+					<div className="max-w-3xl text-sm leading-6 text-brand-muted">
+						{group.description}
+					</div>
+				) : null}
 				<div className="text-sm leading-7 text-brand-foreground">
 					{group.items.join(" · ")}
 				</div>

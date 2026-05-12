@@ -15,6 +15,7 @@ export interface IndexedLink {
 
 export interface PortfolioSkillGroup {
 	category: string;
+	description?: string;
 	items: string[];
 }
 
@@ -100,6 +101,12 @@ export interface StatEntry {
 	detail: string;
 }
 
+export interface SourceOfTruthContent {
+	headline: string;
+	summary: string;
+	bullets: string[];
+}
+
 export interface LabEntry {
 	name: string;
 	status: string;
@@ -157,6 +164,7 @@ export interface PortfolioContent {
 	now: NowContent;
 	values: ValueEntry[];
 	stats: StatEntry[];
+	sourceOfTruth: SourceOfTruthContent;
 	lab: {
 		summary: string;
 		entries: LabEntry[];

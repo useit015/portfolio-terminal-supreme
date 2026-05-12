@@ -1,6 +1,15 @@
+import type { PortfolioContent, StatEntry } from "../../../types";
 import PromptLine from "../PromptLine";
 
-export default function About() {
+type Props = {
+  identity: PortfolioContent["identity"];
+  highlights: string[];
+  stats: StatEntry[];
+};
+
+export default function About({ identity, highlights, stats }: Props) {
+  const stripStats = stats.slice(0, 4);
+
   return (
     <section
       className="portfolio-section"
@@ -11,16 +20,25 @@ export default function About() {
       <h2 className="section-title" id="about-title">What I actually do.</h2>
 
       <p className="plain about-plain">
-        I turn rough product ideas into production software: front end, back end,
-        infrastructure, testing, and delivery. Most useful when the problem is
-        messy, the deadline is real, and somebody needs to own the full slice.
+        {identity.summary} Most useful when the problem is messy, the deadline is
+        real, and somebody needs to own the full slice.
       </p>
 
+      <div className="about-highlights" aria-label="Career proof points">
+        {highlights.map((item) => (
+          <div key={item} className="about-proof">
+            <span aria-hidden="true">›</span>
+            <p>{item}</p>
+          </div>
+        ))}
+      </div>
+
       <div className="about-strip" aria-label="Career highlights">
-        <span>9+ years</span>
-        <span>full-stack</span>
-        <span>healthcare · fintech · AI</span>
-        <span>42 / 1337</span>
+        {stripStats.map((stat) => (
+          <span key={`${stat.value}-${stat.label}`}>
+            {stat.value} {stat.label}
+          </span>
+        ))}
       </div>
     </section>
   );

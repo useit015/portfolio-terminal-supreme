@@ -148,6 +148,7 @@ html[data-scanline="on"] body.portfolio-body::after {
   max-width: var(--content-col);
   margin-inline: auto;
   padding: var(--sp-section) 0;
+  scroll-margin-top: 108px;
 }
 .portfolio-section + .portfolio-section {
   border-top: 1px solid var(--panel-edge);
@@ -157,11 +158,15 @@ html[data-scanline="on"] body.portfolio-body::after {
 }
 
 .prompt-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   font-family: var(--font-mono);
   font-size: var(--fs-sm);
   letter-spacing: var(--tracking-wide);
   margin-bottom: var(--sp-head);
-  word-break: break-all;
+  row-gap: 2px;
+  word-break: normal;
 }
 .prompt-line .p-user {
   color: var(--prompt-user);
@@ -174,6 +179,7 @@ html[data-scanline="on"] body.portfolio-body::after {
 }
 .prompt-line .p-dollar {
   margin: 0 8px 0 4px;
+  white-space: nowrap;
 }
 .prompt-line .p-host {
   color: var(--prompt-host);
@@ -185,6 +191,7 @@ html[data-scanline="on"] body.portfolio-body::after {
 .prompt-line .p-cmd {
   color: var(--fg-color);
   font-weight: var(--fw-semibold);
+  overflow-wrap: break-word;
 }
 .prompt-line .p-caret {
   display: inline-block;
@@ -331,6 +338,28 @@ html[data-scanline="on"] body.portfolio-body::after {
 .about-plain {
   max-width: 58ch;
 }
+.about-highlights {
+  display: grid;
+  gap: 10px;
+  margin-top: var(--sp-block);
+  max-width: 72ch;
+}
+.about-proof {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 8px;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  color: var(--fg-color);
+}
+.about-proof span {
+  color: var(--accent-color);
+  font-family: var(--font-mono);
+}
+.about-proof p {
+  margin: 0;
+}
 .about-strip {
   display: flex;
   flex-wrap: wrap;
@@ -346,6 +375,130 @@ html[data-scanline="on"] body.portfolio-body::after {
   border: 1px solid var(--panel-edge);
   background: color-mix(in srgb, var(--panel-color) 30%, transparent);
   padding: 8px 10px;
+}
+
+/* Proof */
+.proof-plain {
+  max-width: 64ch;
+}
+.proof-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: start;
+}
+.proof-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: var(--sp-block);
+  padding: 0;
+  list-style: none;
+}
+.proof-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  padding: 18px 20px;
+  border: 1px solid var(--panel-edge);
+  background: color-mix(in srgb, var(--panel-color) 52%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--fg-color) 4%, transparent);
+}
+.proof-num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wider);
+  color: var(--muted-color);
+  padding-top: 2px;
+}
+.proof-item p {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  line-height: var(--body-lh);
+  color: var(--fg-color);
+}
+
+/* Toptal badge */
+.toptal-badge-shell,
+.toptal-badge {
+  clip-path: polygon(50% 0, 100% 24%, 100% 76%, 50% 100%, 0 76%, 0 24%);
+}
+.toptal-badge-shell {
+  --toptal-blue: oklch(67% 0.17 235);
+  --toptal-blue-deep: oklch(42% 0.2 262);
+  --toptal-blue-button: oklch(58% 0.24 262);
+  --toptal-ink: oklch(27% 0.03 260);
+  --toptal-paper: oklch(99% 0.006 225);
+
+  display: inline-block;
+  width: 212px;
+  min-width: 212px;
+  padding: 6px;
+  background: var(--toptal-blue);
+  filter: drop-shadow(0 24px 42px color-mix(in oklch, var(--toptal-blue-deep) 28%, transparent));
+}
+.toptal-badge {
+  width: 200px;
+  padding: 24px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--toptal-blue-deep);
+  text-align: center;
+  font-family: "proxima-nova", var(--font-sans);
+  background:
+    radial-gradient(circle at 20% -10%, var(--toptal-blue) -80%, var(--toptal-paper) 30%),
+    radial-gradient(circle at -20% 20%, var(--toptal-blue) -80%, var(--toptal-paper) 30%),
+    radial-gradient(circle at 70% 100%, var(--toptal-blue) -80%, var(--toptal-paper) 30%),
+    radial-gradient(circle at 120% 80%, var(--toptal-blue) -80%, var(--toptal-paper) 30%);
+  background-blend-mode: multiply;
+}
+.toptal-badge-stars {
+  width: 64px;
+}
+.toptal-badge h3 {
+  margin: 0;
+  color: var(--toptal-blue-deep);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.toptal-badge-rule {
+  width: 120px;
+  height: 1px;
+  background: var(--toptal-blue);
+}
+.toptal-badge-vetted {
+  color: var(--toptal-blue-deep);
+  font-size: 16px;
+  margin-bottom: -6px;
+}
+.toptal-badge-logo {
+  width: 100px;
+}
+.toptal-badge-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 4px 20px;
+  border-radius: 6px;
+  background: var(--toptal-blue-button);
+  color: var(--toptal-paper);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+.toptal-badge-link:hover {
+  background: var(--toptal-blue-deep);
+  transform: translateY(-1px);
 }
 
 /* Values */
@@ -791,6 +944,7 @@ html[data-scanline="on"] body.portfolio-body::after {
   }
   .portfolio-section {
     padding: calc(var(--sp-section) * 0.75) 0;
+    scroll-margin-top: 24px;
   }
   .project,
   .skill {
@@ -802,14 +956,23 @@ html[data-scanline="on"] body.portfolio-body::after {
     bottom: 12px;
     right: 12px;
   }
+  .proof-intro {
+    grid-template-columns: 1fr;
+  }
+  .toptal-badge-shell {
+    justify-self: center;
+    margin-top: 8px;
+  }
 }
 
 @media (max-width: 430px) {
   .project,
+  .proof-item,
   .skill {
     grid-template-columns: 1fr;
   }
   .project .num,
+  .proof-num,
   .skill .s-num {
     padding-top: 0;
   }

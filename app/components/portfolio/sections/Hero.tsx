@@ -1,7 +1,12 @@
 import Link from "next/link";
+import type { PortfolioContent } from "../../../types";
 import PromptLine from "../PromptLine";
 
-export default function Hero() {
+type Props = {
+  identity: PortfolioContent["identity"];
+};
+
+export default function Hero({ identity }: Props) {
   return (
     <section className="portfolio-section hero" id="top" aria-labelledby="hero-title">
       <PromptLine path="~" cmd="whoami" caret />
@@ -9,8 +14,8 @@ export default function Hero() {
         I build <span className="accent">software</span> that ships.
       </h1>
       <p className="hero-lede">
-        Senior full-stack engineer. 9+ years turning messy product problems
-        into shipped software across healthcare, fintech, AI tools, and browser games.
+        {identity.intro} I turn messy product problems into shipped software
+        across healthcare, fintech, AI tools, and browser games.
       </p>
       <div className="hero-actions" aria-label="Primary portfolio actions">
         <Link href="/terminal" className="terminal-cta" aria-label="Open the interactive terminal version">

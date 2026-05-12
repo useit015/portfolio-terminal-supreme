@@ -6,6 +6,7 @@ import {
 	renderAbout,
 	renderNow,
 	renderResume,
+	renderSourceOfTruth,
 	renderSkills,
 	renderStats,
 	renderValues,
@@ -48,6 +49,8 @@ export const renderContentByKey = (
 			return renderValues(content.values);
 		case "stats":
 			return renderStats(content);
+		case "source":
+			return renderSourceOfTruth(content);
 		case "skills":
 			return renderSkills(content);
 		case "experience":

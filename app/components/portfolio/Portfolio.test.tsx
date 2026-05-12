@@ -40,6 +40,11 @@ describe('Portfolio', () => {
     expect(screen.getByRole('region', { name: /experience/i })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /skills/i })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /contact/i })).toBeInTheDocument();
+    expect(screen.getAllByText(/top 3% talent/i).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByRole('link', { name: /hire me/i })).toHaveAttribute(
+      'href',
+      'https://www.toptal.com/developers/resume/oussama-nahiz#qzrbyG'
+    );
     expect(screen.queryByText(/available for work/i)).not.toBeInTheDocument();
     expect(screen.getAllByRole('link', { name: /terminal/i }).length).toBeGreaterThanOrEqual(2);
   });

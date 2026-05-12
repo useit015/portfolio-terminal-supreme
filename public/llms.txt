@@ -1,6 +1,6 @@
 # Oussama Nahiz — Terminal Portfolio
 
-> Senior Full-Stack Engineer. 9+ years shipping production software across React, Node.js, TypeScript, and AI. 42 Network graduate. Based in Casablanca, Morocco. Open to senior, staff, and founding engineer roles.
+> Senior Full-Stack Engineer. 9+ years shipping production software across React, Node.js, TypeScript, and AI product work. 42 Network graduate. Based in Casablanca, Morocco. Open to senior, staff, founding-engineer, and selective client work.
 
 ## Identity
 
@@ -14,7 +14,16 @@
 
 ## Summary
 
-I work best on end-to-end product problems: architecture, infrastructure, front end, testing, deployment, and the messy delivery work around them. I am optimizing for teams that value technical depth, calm execution, and someone who can move from messy requirements to shipped software without waiting for perfect conditions.
+I work best on end-to-end product problems: architecture, infrastructure, front end, backend services, testing, deployment, and the messy delivery work around them. I am optimizing for teams that value technical depth, calm execution, and someone who can move from messy requirements to shipped software without waiting for perfect conditions.
+
+## Source of Truth
+
+This portfolio is maintained from a career source-of-truth vault with canonical role notes, project proof, skills evidence, profile drafts, and cleanup/review logs. Public copy stays short, but the claims underneath are tracked.
+
+- Claims trace back to source notes, live-profile reviews, project records, or explicit user-confirmed facts.
+- Toptal verification is surfaced through the public Top 3% Talent badge and linked resume.
+- Public-facing text stays separate from raw/private material like rates, earnings, and internal source captures.
+- The career vault has a review cadence, templates, cleanup policy, and a local wiki checker for frontmatter, links, and boundary warnings.
 
 ## Skills
 
@@ -113,6 +122,8 @@ Built for Blue River Technology as part of a Toptal engagement.
 Shipping end-to-end product work while staying close to AI tooling, side projects, and game-engine experiments. Best fit: senior, staff, or founding-engineer roles where one person needs to own the vertical slice and keep momentum high.
 
 Current public side work: whichmodel, souk-fighter, and ongoing 3D graphics exploration.
+
+The interactive terminal exposes this maintenance layer through `cat source`.
 
 ## Contact
 

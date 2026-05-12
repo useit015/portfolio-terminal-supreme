@@ -4,6 +4,7 @@ import {
 	PortfolioContent,
 	PortfolioLink,
 	PortfolioSkillGroup,
+	SourceOfTruthContent,
 	StatEntry,
 	ValueEntry,
 	WelcomeContent,
@@ -17,9 +18,9 @@ export const identity: PortfolioContent["identity"] = {
 	role: "Senior Full-Stack Engineer",
 	location: "Casablanca Metropolitan Area, Morocco",
 	intro:
-		"Senior full-stack engineer and 42-grad with 9+ years shipping production software across React, Node.js, TypeScript, and AI.",
+		"Senior full-stack engineer and 42-grad with 9+ years shipping production software across React, Node.js, TypeScript, and AI product work.",
 	summary:
-		"I own the full product slice: architecture, infrastructure, front end, backend services, testing, deployment, and the delivery glue between them.",
+		"I work across the full product slice: architecture, infrastructure, front end, backend services, testing, deployment, and the delivery glue between them.",
 	availability:
 		"Open to senior, staff, founding-engineer, and selective client work where I can own a meaningful slice of product delivery.",
 	email: "useit015@gmail.com",
@@ -69,10 +70,10 @@ export const welcome: WelcomeContent = {
 		"\\____/\\__,_/____/____/\\__,_/\\__,_/  ",
 	],
 	introLines: [
-		"Terminal portfolio. Version 1.0.0.",
-		"Try `ls`, `tree`, or `grep react`. `help` shows the public surface. Curiosity handles the rest.",
+		"Terminal portfolio. Version 1.1.0.",
+		"Try `ls`, `tree`, `cat source`, or `grep react`. `help` shows the public surface. Curiosity handles the rest.",
 	],
-	version: "1.0.0",
+	version: "1.1.0",
 };
 
 export const links: PortfolioLink[] = [
@@ -128,18 +129,26 @@ export const highlights: string[] = [
 export const skills: PortfolioSkillGroup[] = [
 	{
 		category: "Core stack",
+		description:
+			"The product surface users see and the application layer that keeps it maintainable.",
 		items: ["TypeScript", "JavaScript", "React", "Next.js", "Node.js", "HTML/CSS"],
 	},
 	{
 		category: "Backend and data",
+		description:
+			"APIs, services, and storage for product workflows that need to survive real usage.",
 		items: ["NestJS", "Express", "PostgreSQL", "MongoDB", "Redis", "REST APIs"],
 	},
 	{
 		category: "Cloud and delivery",
+		description:
+			"The deployment path: serverless infrastructure, containers, and release plumbing.",
 		items: ["AWS SAM", "Lambda", "API Gateway", "S3", "Docker", "CI/CD"],
 	},
 	{
 		category: "AI and ML-adjacent",
+		description:
+			"LLM integrations, model-selection workflows, OCR/KYC, and annotation systems built into real products.",
 		items: [
 			"OpenAI APIs",
 			"OpenRouter",
@@ -151,6 +160,8 @@ export const skills: PortfolioSkillGroup[] = [
 	},
 	{
 		category: "Breadth signals",
+		description:
+			"Mobile, game-tech, real-time, graphics, and systems breadth that helps in unusual product surfaces.",
 		items: [
 			"React Native",
 			"Pixi.js 8",
@@ -172,6 +183,7 @@ export const now: NowContent = {
 	bullets: [
 		"Open to senior, staff, founding-engineer, and selective consulting roles.",
 		"Current public side work: whichmodel, souk-fighter, and ongoing Three.js / game-engine exploration.",
+		"Profile copy is maintained from a source-of-truth vault: evidence first, no invented metrics, public/private boundary kept explicit.",
 		"Strongest in product teams that need architecture judgment and hands-on delivery in the same person.",
 	],
 };
@@ -198,6 +210,18 @@ export const values: ValueEntry[] = [
 			"I build some things because they should exist, and some things because I want to understand how they work.",
 	},
 ];
+
+export const sourceOfTruth: SourceOfTruthContent = {
+	headline: "Evidence-backed, not resume confetti.",
+	summary:
+		"This portfolio is generated from a maintained career source of truth: canonical role notes, project proof, skills evidence, profile drafts, and cleanup/review logs. Public copy stays short, but the claims underneath are tracked.",
+	bullets: [
+		"Claims trace back to source notes, live-profile reviews, project records, or explicit user-confirmed facts.",
+		"Toptal verification is surfaced through the public Top 3% Talent badge and linked resume.",
+		"Public-facing text stays separate from raw/private material like rates, earnings, and internal source captures.",
+		"The career vault now has a review cadence, templates, cleanup policy, and a local wiki checker for frontmatter, links, and boundary warnings.",
+	],
+};
 
 export const stats: StatEntry[] = [
 	{

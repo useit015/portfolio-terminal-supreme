@@ -123,6 +123,11 @@ describe('command registry', () => {
     renderForInput('whoami');
     expect(screen.getByTestId('whoami-output')).toHaveTextContent('visitor');
 
+    renderForInput('cat source');
+    expect(screen.getByTestId('source-of-truth')).toHaveTextContent(
+      'Evidence-backed'
+    );
+
     renderForInput('python');
     expect(screen.getByTestId('not-found-output')).toHaveTextContent(
       'Python is in `skills`, not in the shell runtime.'

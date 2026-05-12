@@ -30,6 +30,13 @@ export const filesystem: VirtualFsNode[] = [
 		renderKey: "stats",
 	},
 	{
+		name: "source",
+		path: "/",
+		type: "file",
+		description: "how public claims are maintained",
+		renderKey: "source",
+	},
+	{
 		name: "skills",
 		path: "/",
 		type: "file",

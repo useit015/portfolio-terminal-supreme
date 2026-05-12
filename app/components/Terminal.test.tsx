@@ -61,8 +61,8 @@ describe('Terminal', () => {
     renderTerminal();
 
     expect(screen.getByTestId('welcome')).toBeInTheDocument();
-    expect(screen.getByText(/Version 1.0.0/i)).toBeInTheDocument();
-    expect(screen.getByText(/Try `ls`, `tree`, or `grep react`/i)).toBeInTheDocument();
+    expect(screen.getByText(/Version 1.1.0/i)).toBeInTheDocument();
+    expect(screen.getByText(/Try `ls`, `tree`, `cat source`, or `grep react`/i)).toBeInTheDocument();
     expect(screen.queryByRole('status', { name: /terminal session is live/i })).not.toBeInTheDocument();
     expect(screen.queryByText(/^live$/i)).not.toBeInTheDocument();
   });
@@ -82,6 +82,11 @@ describe('Terminal', () => {
 
     await user.type(input, 'stats{enter}');
     expect(await screen.findByTestId('stats')).toBeInTheDocument();
+
+    await user.type(input, 'cat source{enter}');
+    expect(await screen.findByTestId('source-of-truth')).toHaveTextContent(
+      'Evidence-backed'
+    );
 
     await user.type(input, 'skills{enter}');
     expect(await screen.findByTestId('skills')).toBeInTheDocument();
