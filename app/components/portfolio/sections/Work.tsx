@@ -15,8 +15,9 @@ export default function Work({ projects }: Props) {
       <PromptLine path="~/work" cmd="ls projects/" />
       <h2 className="section-title" id="work-title">Things I&apos;ve built and shipped.</h2>
       <p className="plain">
-        A small, honest selection. Two are public and you can inspect the code.
-        Two shipped into production at paying enterprise clients.
+        A compact selection across AI tooling, creator workflows, game-tech,
+        and enterprise delivery. Public links appear where the repo or proof
+        surface is safe to open.
       </p>
 
       <div className="projects">

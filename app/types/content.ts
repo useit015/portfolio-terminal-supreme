@@ -35,7 +35,7 @@ export interface PortfolioProject {
 	description: string;
 	stack: string[];
 	outcome: string;
-	link: string;
+	link?: string;
 }
 
 export interface EducationEntry {

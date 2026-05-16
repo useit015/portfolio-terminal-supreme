@@ -148,7 +148,7 @@ export const useTerminalSession = ({
 			const project = content.projects.find(
 				(entry) => entry.id.toString() === parsed.args[1],
 			);
-			if (project) {
+			if (project?.link) {
 				window.open(project.link, "_blank", "noopener,noreferrer");
 			}
 			return;

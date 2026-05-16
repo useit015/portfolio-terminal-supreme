@@ -181,6 +181,34 @@ export const projects: PortfolioProject[] = [
 	},
 	{
 		id: 2,
+		name: "Open Design",
+		tag: "ai design tooling",
+		description:
+			"A local-first design-agent product that connects coding-agent CLIs, design systems, and sandboxed previews into a deployable workflow.",
+		stack: ["TypeScript", "Local daemon", "Web app", "SQLite", "Design systems"],
+		outcome: "Open-source product surface with public repository proof.",
+		link: "https://github.com/nexu-io/open-design",
+	},
+	{
+		id: 3,
+		name: "Sigil",
+		tag: "creator tools",
+		description:
+			"A creator studio for converting video and images into shareable ASCII previews, with a studio UI, player packages, CLI automation, and Rust conversion tooling.",
+		stack: ["Next.js", "React", "TypeScript", "Rust", "Supabase"],
+		outcome: "329+ commits locally across studio, player, CLI, and conversion layers.",
+	},
+	{
+		id: 4,
+		name: "Asset Forge",
+		tag: "ai game assets",
+		description:
+			"A full-stack asset-generation tool for game and character assets, with auth, storage, fal.ai generation, and quality-analysis workflows.",
+		stack: ["React", "Vite", "Express", "TypeScript", "Supabase", "Cloudflare R2"],
+		outcome: "Full product slice across frontend, backend, persistence, and media pipelines.",
+	},
+	{
+		id: 5,
 		name: "souk-fighter",
 		tag: "game-tech",
 		description:
@@ -190,7 +218,7 @@ export const projects: PortfolioProject[] = [
 		link: "https://github.com/useit015/souk-fighter",
 	},
 	{
-		id: 3,
+		id: 6,
 		name: "Radiometer Course Creator",
 		tag: "enterprise health-tech",
 		description:
@@ -200,7 +228,7 @@ export const projects: PortfolioProject[] = [
 		link: "https://www.toptal.com/developers/resume/oussama-nahiz",
 	},
 	{
-		id: 4,
+		id: 7,
 		name: "Clicky Clicky",
 		tag: "computer vision ops",
 		description:
@@ -213,14 +241,21 @@ export const projects: PortfolioProject[] = [
 
 export const lab: { summary: string; entries: LabEntry[] } = {
 	summary:
-		"The lab is where I keep the work that proves range: not every build needs to be monetized to be technically serious.",
+		"The lab is where I keep active tooling and experiments that show range before they become lead portfolio pieces.",
 	entries: [
 		{
-			name: "whichmodel",
+			name: "Scripter + script-tool",
 			status: "Active",
 			detail:
-				"Open-source CLI for choosing AI models across providers. Built because model choice was getting noisy and repetitive.",
-			stack: ["TypeScript", "Node.js", "OpenRouter", "Replicate", "FAL"],
+				"Research & Script Terminal UI backed by a TypeScript generation CLI with prompt regression evals and structured API envelopes.",
+			stack: ["Next.js", "TypeScript", "Promptfoo", "Provider APIs"],
+		},
+		{
+			name: "Sigil production previews",
+			status: "Active",
+			detail:
+				"Feature work around instant production preview flows for ASCII video and image conversion.",
+			stack: ["Next.js", "React", "Rust", "Supabase"],
 		},
 		{
 			name: "souk-fighter",
@@ -233,7 +268,7 @@ export const lab: { summary: string; entries: LabEntry[] } = {
 			name: "3D exploration",
 			status: "Experimental",
 			detail:
-				"Ongoing Three.js research to understand the edges of web-based game engines and graphics tooling.",
+				"Ongoing Three.js and web-graphics research to understand the edges of browser game engines and tooling.",
 			stack: ["Three.js", "TypeScript", "Web graphics"],
 		},
 		{

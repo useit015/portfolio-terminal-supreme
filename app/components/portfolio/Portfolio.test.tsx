@@ -36,7 +36,10 @@ describe('Portfolio', () => {
     expect(screen.getByRole('navigation', { name: /portfolio navigation/i })).toBeInTheDocument();
     expect(screen.getByRole('main', { name: /scrollable portfolio/i })).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /about/i })).toBeInTheDocument();
-    expect(screen.queryByRole('region', { name: /selected work/i })).not.toBeInTheDocument();
+    expect(screen.getByRole('region', { name: /selected work/i })).toBeInTheDocument();
+    expect(screen.getByText(/Open Design/i)).toBeInTheDocument();
+    expect(screen.getByText(/Sigil/i)).toBeInTheDocument();
+    expect(screen.getByText(/Asset Forge/i)).toBeInTheDocument();
     expect(screen.getByRole('region', { name: /experience/i })).toBeInTheDocument();
     expect(screen.queryByText(/AI Developer & Researcher/i)).not.toBeInTheDocument();
     expect(screen.queryByText(/Contract via Toptal/i)).not.toBeInTheDocument();

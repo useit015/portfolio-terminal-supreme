@@ -148,14 +148,14 @@ export const skills: PortfolioSkillGroup[] = [
 	{
 		category: "AI and ML-adjacent",
 		description:
-			"LLM integrations, model-selection workflows, OCR/KYC, and annotation systems built into real products.",
+			"LLM integrations, model-selection workflows, AI media tooling, OCR/KYC, and annotation systems built into real products.",
 		items: [
 			"OpenAI APIs",
 			"OpenRouter",
 			"Replicate",
 			"FAL",
+			"Agentic AI",
 			"LLM integration",
-			"OCR/KYC flows",
 		],
 	},
 	{
@@ -175,14 +175,14 @@ export const skills: PortfolioSkillGroup[] = [
 
 export const now: NowContent = {
 	headline:
-		"Building AI developer tools, product systems, browser-game experiments, and selective client work while staying hands-on with React, Node.js, and TypeScript.",
+		"Building AI developer tools, creator systems, browser-game experiments, and selective client work while staying hands-on with React, Node.js, and TypeScript.",
 	buildMode:
 		"Best fit: senior, staff, or founding-engineer roles where one person needs to turn messy requirements into a shipped product slice.",
 	summary:
 		"I am optimizing for teams that value technical depth, calm execution, and someone who can move from ambiguity to production without waiting for perfect conditions.",
 	bullets: [
 		"Open to senior, staff, founding-engineer, and selective consulting roles.",
-		"Current public side work: whichmodel, souk-fighter, and ongoing Three.js / game-engine exploration.",
+		"Current public side work: whichmodel, Open Design, Sigil, Scripter/script-tool, Asset Forge, souk-fighter, and ongoing game-engine exploration.",
 		"Profile copy is maintained from a source-of-truth vault: evidence first, no invented metrics, public/private boundary kept explicit.",
 		"Strongest in product teams that need architecture judgment and hands-on delivery in the same person.",
 	],
